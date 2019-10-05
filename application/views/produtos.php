@@ -21,6 +21,11 @@
       .roboto {font-family: 'Roboto', sans-serif}
       .border-radius {border-radius: 5rem}
       .border-radius-sm {border-radius: 1em}
+      .bg-info{background-color: #5092c2 !important;}
+      .badge-info{background-color: #5092c2 !important;}
+      .btn-info{background-color: #5092c2 !important;}
+      .border-info{border-color: #5092c2 !important;}
+      .text-info{color: #5092c2 !important;}
       body{
         font-family: 'Lexend Deca', sans-serif;
       }
@@ -30,14 +35,14 @@
   </head>
   <body class=" mt-5 pt-1">
     <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-white">
-      <a class="navbar-toggler text-primary border-radius border-primary mr-2" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+      <a class="navbar-toggler text-info border-radius border-info mr-2" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <i class="fas fa-bars"></i></i></a>
       </a>
 
 
-      <a id="navbar-brand" class="navbar-brand" href="#"><i class="fas fa-cloud"></i> Impact</a>
+      <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
-        <a class="btn btn-outline-primary border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pedro Lucas</span>
             <i class="fas fa-user"></i>
             <!-- <img class="img-profile rounded-circle" src=""> -->
@@ -45,8 +50,6 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="#">
             <i class="fas fa-user"></i> Perfil</a>
-          <a class="dropdown-item text-muted" href="#">
-            <i class="fas fa-cog"></i> Ajustes</a>
           <a class="dropdown-item text-muted" href="encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
@@ -74,10 +77,10 @@
     <div class="container-fluid p-0 pt-1 .bg-light">
       <!-- Card Tabela -->
           <div class="col-12">
-            <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-primary">
+            <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
               <!-- nome -->
               <div class="card-header bg-transparent border-0">
-                Produtos
+                <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
               </div>
               <!-- tabela -->
               <div class="card-body">
@@ -88,7 +91,6 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Categoria</th>
-                        <th scope="col">Loja</th>
                         <th scope="col">Ações</th>
                       </tr>
                     </thead>
@@ -101,11 +103,10 @@
                             <td><?= $produto->nome; ?></td>
                             <td><?php echo $produto->descricao; ?></td>
                             <td><?php echo $produto->categoria; ?></td>
-                            <td><a href="<?php echo $produto->link; ?>" target="_blank">Acessar</a></td>
                             <td>
-                              <a href="/produtos/detalhar/<?php echo $produto->id; ?>"><i class="fas fa-eye m-1"></i></a>
-                              <a href="/produtos/editar/<?php echo $produto->id; ?>"><i class="fas fa-edit m-1"></i></a>
-                              <a href="/produtos/deletar/<?php echo $produto->id; ?>"><i class="fas fa-trash-alt m-1"></i></a>
+                              <a class="text-info" href="/produtos/detalhar/<?php echo $produto->id; ?>"><i class="fas fa-eye m-1"></i></a>
+                              <a class="text-info" href="/produtos/editar/<?php echo $produto->id; ?>"><i class="fas fa-edit m-1"></i></a>
+                              <a class="text-info" href="/produtos/deletar/<?php echo $produto->id; ?>"><i class="fas fa-trash-alt m-1"></i></a>
                             </td>
                           </tr>
                       <?php $contador++;
@@ -113,32 +114,9 @@
                       ?>
                     </tbody>
                   </table>
-
-                  <!-- info + paginação -->
-                  <div class="row ml-1 mr-1">
-
                     <div class="col text-muted">
                       Registros: <?php echo $contador ?>
                     </div>
-
-                    <ul class="pagination col justify-content-end">
-                      <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-                      </li>
-                      <li class="page-item active">
-                        <a class="page-link" href="#">1</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                      </li>
-                      <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                      </li>
-                    </ul>
-                  </div>
                 </div>
               </div>
             </div>

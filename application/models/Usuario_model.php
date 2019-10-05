@@ -10,4 +10,11 @@ class Usuario_model extends CI_Model {
 		$login=$this->db->get('usuarios')->row_array();
 		return $login;
 	}
+
+	public function cadastrarUsuario($dados=NULL){
+		if ($dados!=NULL) {
+			$this->db->insert('usuarios',$dados);
+		}
+		
+	}
 }

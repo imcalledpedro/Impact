@@ -36,4 +36,15 @@ class Usuario extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('login');	
 	}
+
+	public function cadastrarUsuario(){
+		$dados['name']=$this->input->post['name'];
+		$dados['email']=$this->input->post['email'];
+		$dados['password']=$this->input->post['password'];
+		//$this->input->post['passwordConfirm'];
+
+		$this->load->model('Usuario_model');
+		$this->Usuario_model->cadastrarUsuario($dados);
+
+	}
 }

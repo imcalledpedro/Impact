@@ -28,25 +28,25 @@
               <div class="text-center mb-4">
                 <img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="80">
               </div>
-              <form class="form-signin" action="login" method="post">
+              <form class="form-signin" action="Usuario/cadastrarUsuario" method="post">
 
                 <div class="form-label-group">
-                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
                   <label for="inputUsername">Nome de usuário</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input type="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
+                  <input type="email" id="inputEmail" class="form-control" placeholder="Email" name="email" required autofocus>
                   <label for="inputEmail">Email</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                  <input type="password" id="inputPassword" class="form-control" placeholder="Senha" name="password" required>
                   <label for="inputPassword">Senha</label>
                 </div>
 
                 <div class="form-label-group">
-                  <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirmar Senha" required>
+                  <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirmar Senha" name="passwordConfirm" required>
                   <label for="inputConfirmPassword">Confirmar Senha</label>
                 </div>
 

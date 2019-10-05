@@ -5,6 +5,7 @@ class Publicacoes_model extends CI_Model
 {
 	public function getPublicacoes()
 	{
+		$this->db->order_by('id','DESC');
 		$query = $this->db->get('publicacoes');
 		return $query->result();
 	}

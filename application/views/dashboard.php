@@ -58,7 +58,7 @@
       </div> 
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
       
       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
@@ -75,19 +75,6 @@
         </ul>
       </div>
     </nav>
-
-    <!-- <?php 
-      // $c_produtos = 0;
-      // $c_publicacoes = 0;
-
-      //  foreach ($publicacoes as $publicacao) {
-      //   $c_publicacoes ++;
-      //  }
-      
-      // foreach ($produtos as $produto) {
-      //   $c_produtos ++;
-      // }
-     ?> -->
 
     <div class="container-fluid p-0 pt-1">
       <div class="row col-12 m-3">

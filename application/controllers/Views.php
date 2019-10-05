@@ -58,4 +58,8 @@ class Views extends CI_Controller {
 		}
 		
 	}
+
+	public function cadastrar(){
+		$this->load->view('cadastro');
+	}
 }

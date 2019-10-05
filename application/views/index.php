@@ -32,6 +32,14 @@
       .border-info{border-color: #5092c2 !important;}
       .text-info{color: #5092c2 !important;}
       .card-img-top {object-fit: cover;}
+      .floating {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 1060;
+        border-radius:30px;
+      }
+  
     </style>
 
     <title>Home | IMPACT</title>
@@ -68,6 +76,7 @@
 	  </div>
 	</nav>
 
+
     <section id="Home">
         <div class="container-fluid mt-4">
             <div class="carousel bg-info shadow-lg rounded-lg p-5">
@@ -84,6 +93,9 @@
             </div>
         </div>
     </section>
+
+    <!-- Login button -->
+    <a title="Área do Administrador" href="login" class="btn btn-warning text-white floating"><i class="fas fa-lock"></i></a>
 
     <section class="mt-5">
 
@@ -104,8 +116,8 @@
                             <div class="card-body">
                               <h5 class="card-title"><?php echo $publicacao->titulo ?></h5>
                               <p class="card-text"><small><?php echo $publicacao->descricao ?></small></p>
-                              <a href="" class="btn btn-info">Ler</a>
-                              <p class="card-text text-right"><small class="text-muted">Publicado pela equipe Impact</small></p>
+                              <a href="#" class="btn btn-info shadow">Continuar lendo</a>
+                              <p class="card-text text-right"><small class="text-muted"><?php echo $publicacao->data_publicacao; ?> - Equipe do Impact</small></p>
                             </div>
                           </div>
                         </div>
