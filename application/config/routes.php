@@ -12,4 +12,4 @@ $route['produtos'] = 'Views/produtos';
 $route['publicacoes'] = 'Views/publicacoes';
 $route['encerrar'] = 'Usuario/encerrar';
 
-// $route['produtos'] = 'Produtos';
+$route['index'] = 'Home/index';

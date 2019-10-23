@@ -23,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-          <div class="card card-signin my-5">
+          <div class="card my-5">
             <div class="card-body">
               <div class="text-center mb-4">
                 <img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="80">
@@ -31,8 +31,8 @@
               <form class="form-signin" action="Usuario/cadastrarUsuario" method="post">
 
                 <div class="form-label-group">
-                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="username" required autofocus>
-                  <label for="inputUsername">Nome de usuário</label>
+                  <input type="text" id="inputUsername" class="form-control" placeholder="Username" name="name" required autofocus>
+                  <label for="inputUsername">Nome</label>
                 </div>
 
                 <div class="form-label-group">

@@ -10,6 +10,15 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/css/login_form.css">
+    <style type="text/css">
+      .floating {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 1060;
+        border-radius:30px;
+      }
+    </style>
 
     <!-- Google font -->
     <link href="https://fonts.googleapis.com/css?family=Lexend+Deca|Roboto&display=swap" rel="stylesheet">
@@ -20,6 +29,9 @@
     <title>Login | Impact</title>
   </head>
   <body>
+
+    <!-- Home button -->
+    <a title="Página Inicial" href="index" class="btn btn-warning text-white floating"><i class="fas fa-home"></i></a>
 
     <div class="container">
       <div class="row">

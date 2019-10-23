@@ -38,10 +38,12 @@ class Usuario extends CI_Controller {
 	}
 
 	public function cadastrarUsuario(){
-		$dados['name']=$this->input->post['name'];
-		$dados['email']=$this->input->post['email'];
-		$dados['password']=$this->input->post['password'];
-		//$this->input->post['passwordConfirm'];
+
+		$dados = array(
+			'name' => $this->input->post("name"),
+			'email' => $this->input->post("email"),
+			'password' => $this->input->post("password")	
+		);
 
 		$this->load->model('Usuario_model');
 		$this->Usuario_model->cadastrarUsuario($dados);
