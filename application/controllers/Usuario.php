@@ -19,11 +19,14 @@ class Usuario extends CI_Controller {
 
 		$email = $this->input->post('email');
 		$password = $this->input->post('password');
+		$nome = $this->Usuario_model->puxarNomeDoCara($email);
 
 		$login = $this->Usuario_model->login($email,$password);
 		if ($login) {
 			// echo "deu certo";
 			$this->session->set_userdata('login',$login);
+			$this->session->set_userdata('email',$email);
+			$this->session->set_userdata('nome',$nome);
 			// $this->session->set_flashdata('success','Logado com sucesso!');
 			redirect('dashboard'); 
 		} else {

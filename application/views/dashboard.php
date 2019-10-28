@@ -43,7 +43,9 @@
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
         <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pedro Lucas</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+              <?php echo $this->session->userdata('nome'); ?>
+            </span>
             <i class="fas fa-user"></i>
             <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
@@ -76,16 +78,23 @@
       </div>
     </nav>
 
+    <?php 
+      $nProdutos = $this->db->query('SELECT * FROM produtos');
+      $nPublicacoes = $this->db->query('SELECT * FROM publicacoes');
+     ?>
+
     <div class="container-fluid p-0 pt-1">
       <div class="row col-12 m-3">
         <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
-          <div class="card-body px-4 py-2">
-              Pulicações no blog <span class="badge badge-info"><?php echo $publicacoes; ?></span>            
+          <div class="card-body px-5 py-5 text-center">
+            <h1><span class="badge badge-info"><?php echo $nPublicacoes->num_rows(); ?></span></h1>
+            <i class="fas fa-columns"></i> Pulicações no blog
           </div>
         </div>
         <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
-          <div class="card-body px-4 py-2">
-              Produtos cadastrados <span class="badge badge-info"><?php ?></span>            
+          <div class="card-body px-5 py-5 text-center">
+            <h1><span class="badge badge-info"><?php echo $nProdutos->num_rows(); ?></span></h1>
+            <i class="fas fa-shopping-basket"></i> Produtos cadastrados             
           </div>
         </div>
       </div>

@@ -14,7 +14,17 @@ class Usuario_model extends CI_Model {
 	public function cadastrarUsuario($dados=NULL){
 		if ($dados!=NULL) {
 			$this->db->insert('usuarios',$dados);
-		}
+		}redirect('login');	
 		
+	}
+
+	public function puxarNomeDoCara($email) {
+		// $this->db->select('name');
+		// $this->db->where('email', $email);
+		// $nomeDoCara = $this->db->get('usuarios');
+		// return $nomeDoCara;
+		$query = $this->db->query("SELECT name FROM usuarios WHERE email = '".$email."'");
+		$row = $query->row();
+		return $row->name;
 	}
 }
