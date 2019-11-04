@@ -11,4 +11,18 @@ class Home extends CI_Controller {
 
 		$this->load->view('index', $data);
 	}
+
+	public function deletarProduto() {
+		$id = $this->input->get('id');
+		$this->db->where('id', $id);
+		$this->db->delete('produtos');
+		redirect('produtos');
+	}
+
+	public function deletarPublicacao() {
+		$id = $this->input->get('id');
+		$this->db->where('id', $id);
+		$this->db->delete('publicacoes');
+		redirect('publicacoes');
+	}
 }

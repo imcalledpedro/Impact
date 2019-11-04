@@ -52,8 +52,6 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="#">
             <i class="fas fa-user"></i> Perfil</a>
-          <a class="dropdown-item text-muted" href="#">
-            <i class="fas fa-cog"></i> Ajustes</a>
           <a class="dropdown-item text-muted" href="encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
@@ -68,11 +66,11 @@
             <a class="nav-link text-info" href="dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="publicacoes"><i class="fas fa-columns"></i> Publicações</a>
+            <a class="nav-link text-secondary" href="dashboard_publicacoes"><i class="fas fa-columns"></i> Publicações</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
+            <a class="nav-link text-secondary" href="dashboard_produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
           </li>
         </ul>
       </div>

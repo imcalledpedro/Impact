@@ -64,33 +64,34 @@
             <a class="nav-link text-secondary" href="dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="publicacoes"><i class="fas fa-columns"></i> Publicações</a>
+            <a class="nav-link text-info" href="dashboard_publicacoes"><i class="fas fa-columns"></i> Publicações</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
+            <a class="nav-link text-secondary" href="dashboard_produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid p-0 pt-1 .bg-light">
+    <div class="container-fluid p-0 pt-1">
       <!-- Card Tabela -->
           <div class="col-12">
             <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
               <!-- nome -->
               <div class="card-header bg-transparent border-0">
-                <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
+                <h5><i class="fas fa-columns"></i> Publicações</h5>
               </div>
               <!-- tabela -->
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-hover text-center ">
+                  <table class="table table-hover text-center">
                     <thead>
                       <tr>
-                        <th scope="col">Nome</th>
+                        <th scope="col">Título</th>
                         <th scope="col">Descrição</th>
-                        <th scope="col">Categoria</th>
+                        <th scope="col">Data</th>
+                        <th scope="col">Anexo</th>
                         <th scope="col">Ações</th>
                       </tr>
                     </thead>
@@ -98,15 +99,16 @@
 
                       <?php
                         $contador = 0;
-                        foreach ($produtos as $produto) { ?>
+                        foreach ($publicacoes as $publicacao) { ?>
                           <tr>
-                            <td><?= $produto->nome; ?></td>
-                            <td><?php echo $produto->descricao; ?></td>
-                            <td><?php echo $produto->categoria; ?></td>
+                            <td><?= $publicacao->titulo; ?></td>
+                            <td><?php echo $publicacao->descricao; ?></td>
+                            <td><?php echo $publicacao->data_publicacao; ?></td>
+                            <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
                             <td>
-                              <a class="text-info" href="/produtos/detalhar/<?php echo $produto->id; ?>"><i class="fas fa-eye m-1"></i></a>
-                              <a class="text-info" href="/produtos/editar/<?php echo $produto->id; ?>"><i class="fas fa-edit m-1"></i></a>
-                              <a class="text-info" href="/produtos/deletar/<?php echo $produto->id; ?>"><i class="fas fa-trash-alt m-1"></i></a>
+                              <a class="text-info" href="/produtos/detalhar/<?php echo $publicacao->id; ?>"><i class="fas fa-eye"></i></a>
+                              <a class="text-info" href="/produtos/editar/<?php echo $publicacao->id; ?>"><i class="fas fa-edit"></i></a>
+                              <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash-alt"></i></a>
                             </td>
                           </tr>
                       <?php $contador++;
@@ -114,9 +116,9 @@
                       ?>
                     </tbody>
                   </table>
-                    <div class="col text-muted">
+                  <div class="col text-muted">
                       Registros: <?php echo $contador ?>
-                    </div>
+                  </div>
                 </div>
               </div>
             </div>

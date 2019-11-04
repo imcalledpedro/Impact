@@ -31,28 +31,28 @@ class Views extends CI_Controller {
 
 	}
 
-	public function produtos()
+	public function dprodutos()
 	{
 		if (isset($_SESSION['login'])) {
 			$this->load->model('produtos_model', 'produtos');
 
 			$data['produtos'] = $this->produtos->getProdutos();
 
-			$this->load->view('produtos', $data);
+			$this->load->view('dprodutos', $data);
 		}else {
 			#code...
 		}
 		
 	}
 
-	public function publicacoes()
+	public function dpublicacoes()
 	{
 		if (isset($_SESSION['login'])) {
 			$this->load->model('publicacoes_model', 'publicacoes');
 
 			$data['publicacoes'] = $this->publicacoes->getPublicacoes();
 
-			$this->load->view('publicacoes', $data);
+			$this->load->view('dpublicacoes', $data);
 		}else {
 			#code...
 		}
@@ -62,4 +62,5 @@ class Views extends CI_Controller {
 	public function cadastrar(){
 		$this->load->view('cadastro');
 	}
+
 }

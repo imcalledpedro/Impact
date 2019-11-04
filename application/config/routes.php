@@ -7,9 +7,16 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'Usuario/logar';
 $route['register'] = 'Views/cadastrar';
 $route['autenticar'] = 'Usuario/autenticar';
+
 $route['dashboard'] = 'Views/dashboard';
-$route['produtos'] = 'Views/produtos';
-$route['publicacoes'] = 'Views/publicacoes';
-$route['encerrar'] = 'Usuario/encerrar';
+$route['dashboard_produtos'] = 'Views/dprodutos';
+$route['dashboard_publicacoes'] = 'Views/dpublicacoes';
 
 $route['index'] = 'Home/index';
+$route['produtos'] = 'Views/produtos';
+
+$route['encerrar'] = 'Usuario/encerrar';
+
+
+$route['deletarProduto'] = 'Home/deletarProduto';
+$route['deletarPublicacao'] = 'Home/deletarPublicacao';
