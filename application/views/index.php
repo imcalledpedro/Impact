@@ -105,8 +105,6 @@
             <div class="container">
                 <div class="row">
 
-
-
                   <?php $contador = 0;
                       foreach ($publicacoes as $publicacao) { ?>
                         <!-- Card de Postagem -->
@@ -115,7 +113,7 @@
                             <div class="card-body">
                               <h5 class="card-title"><?php echo $publicacao->titulo ?></h5>
                               <p class="card-text"><small><?php echo $publicacao->descricao ?></small></p>
-                              <a href="#" class="btn btn-info shadow">Continuar lendo</a>
+                              <a href="publicacao/?id=<?php echo $publicacao->id;?>" class="btn btn-info shadow">Continuar lendo</a>
                               <p class="card-text text-right"><small class="text-muted"><?php 
                                 $sampleDate = $publicacao->data_publicacao;
                                 $convertDate = date("d/m/Y", strtotime($sampleDate));                                  

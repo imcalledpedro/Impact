@@ -67,4 +67,8 @@ class Views extends CI_Controller {
 		$this->load->view('produtos');
 	}
 
+	public function publicacao() {
+		$this->load->view('publicacao');
+	}
+
 }
