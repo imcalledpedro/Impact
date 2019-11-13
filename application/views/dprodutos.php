@@ -104,7 +104,6 @@
                             <td><?php echo $produto->descricao; ?></td>
                             <td><?php echo $produto->categoria; ?></td>
                             <td>
-                              <a class="text-info" href="/produtos/detalhar/<?php echo $produto->id; ?>"><i class="fas fa-eye m-1"></i></a>
                               <a class="text-info" href="/produtos/editar/<?php echo $produto->id; ?>"><i class="fas fa-edit m-1"></i></a>
                               <a class="text-info" href="deletarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash-alt m-1"></i></a>
                             </td>

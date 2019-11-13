@@ -106,8 +106,7 @@
                             <td><?php echo $publicacao->data_publicacao; ?></td>
                             <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
                             <td>
-                              <a class="text-info" href="/produtos/detalhar/<?php echo $publicacao->id; ?>"><i class="fas fa-eye"></i></a>
-                              <a class="text-info" href="/produtos/editar/<?php echo $publicacao->id; ?>"><i class="fas fa-edit"></i></a>
+                              <a class="text-info" href="editarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-edit"></i></a>
                               <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash-alt"></i></a>
                             </td>
                           </tr>

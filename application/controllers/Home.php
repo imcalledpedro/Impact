@@ -25,4 +25,5 @@ class Home extends CI_Controller {
 		$this->db->delete('publicacoes');
 		redirect('publicacoes');
 	}
+
 }

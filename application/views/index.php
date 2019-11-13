@@ -118,9 +118,9 @@
                               <a href="#" class="btn btn-info shadow">Continuar lendo</a>
                               <p class="card-text text-right"><small class="text-muted"><?php 
                                 $sampleDate = $publicacao->data_publicacao;
-                                $convertDate = date("d-m-Y", strtotime($sampleDate));                                  
-                                echo $convertDate;
-                               ?> - Equipe do Impact</small></p>
+                                $convertDate = date("d/m/Y", strtotime($sampleDate));                                  
+                                echo "Data de publicação: ",$convertDate;
+                               ?></small></p>
                             </div>
                           </div>
                         </div>
