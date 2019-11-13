@@ -67,7 +67,7 @@
 	        <a class="nav-link" href="#publicacoes" data-smooth="#publicacoes">Publicações</a>
 	      </li>
 	      <li class="nav-item">
-	        <a class="nav-link" href="#">Produtos</a>
+	        <a class="nav-link" href="produtos">Produtos</a>
 	      </li>
         <li class="nav-item">
           <a class="nav-link" href="#contato">Contato</a>
