@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/9207b5b49a.js"></script>
 
     <!-- Custom CSS -->
+
     <style type="text/css">
       .roboto {font-family: 'Roboto', sans-serif}
       .border-radius {border-radius: 5rem}
@@ -34,11 +35,10 @@
     <title>Painel de Controle | Impact</title>
   </head>
   <body class=" mt-5 pt-1 bg-light">
-    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-white">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-white shadow">
       <a class="navbar-toggler text-info border-radius border-info mr-2" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
         <i class="fas fa-bars"></i></i></a>
       </a>
-
 
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
@@ -50,50 +50,56 @@
             <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>perfil">
-            <i class="fas fa-user"></i> Perfil</a>
+          <a class="dropdown-item text-muted" href="<?php echo base_url();?>dashboard">
+            <i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
           <a class="dropdown-item text-muted" href="encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
       </div> 
     </nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
-      
-      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link text-info" href="dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-secondary" href="dashboard_publicacoes"><i class="fas fa-columns"></i> Publicações</a>
-          </li>
+    <div class="container  mt-5 pt-1">
+      <div class="row">
+        <div class="col-md-6 col-sm-12 mx-auto">
+
+          <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
+            <!-- Editar perfil -->
+              <div class="card-header bg-transparent border-0">
+                <h5><i class="fas fa-edit"></i> Editar Perfil</h5>
+              </div>
+
+              <div class="card-body">
+                 <form class="form-signin" method="post" action="autenticar">
+
+                <div class="form-label-group mb-4">
+                  <label for="inputNome">Nome</label>
+                  <input name="nome" type="text" id="inputNome" class="form-control" placeholder="Nome">
+                </div>
+
+                <div class="form-label-group mb-4">
+                  <label for="inputEmail">Email</label>
+                  <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email">
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="inputPassword">Senha</label>
+                  <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Senha">
+                </div>
+
+                <div class="form-label-group mb-5">
+                    <label for="inputPassword">Confirmar Senha</label>
+                  <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Senha">
+                </div>
+
+                <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>
+
+              </form>
+              </div>
+
+
+           
+          </div> 
           
-          <li class="nav-item">
-            <a class="nav-link text-secondary" href="dashboard_produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-    <?php 
-      $nProdutos = $this->db->query('SELECT * FROM produtos');
-      $nPublicacoes = $this->db->query('SELECT * FROM publicacoes');
-     ?>
-
-    <div class="container-fluid p-0 pt-1">
-      <div class="row col-12 m-3">
-        <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
-          <div class="card-body px-5 py-5 text-center">
-            <h1><span class="badge badge-info"><?php echo $nPublicacoes->num_rows(); ?></span></h1>
-            <i class="fas fa-columns"></i> Pulicações no blog
-          </div>
-        </div>
-        <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
-          <div class="card-body px-5 py-5 text-center">
-            <h1><span class="badge badge-info"><?php echo $nProdutos->num_rows(); ?></span></h1>
-            <i class="fas fa-shopping-basket"></i> Produtos cadastrados             
-          </div>
         </div>
       </div>
     </div>

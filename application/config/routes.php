@@ -16,6 +16,7 @@ $route['index'] = 'Home/index';
 $route['produtos'] = 'Views/produtos';
 $route['publicacao'] = 'Views/publicacao';
 
+$route['perfil'] = 'Usuario/perfil';
 $route['encerrar'] = 'Usuario/encerrar';
 
 

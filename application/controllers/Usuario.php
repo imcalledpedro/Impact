@@ -34,6 +34,11 @@ class Usuario extends CI_Controller {
 		}
 	}
 
+	public function perfil()
+	{
+		$this->load->view('dperfil');
+	}
+
 	public function encerrar()
 	{
 		$this->session->sess_destroy();

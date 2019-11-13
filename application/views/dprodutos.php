@@ -48,7 +48,7 @@
             <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item text-muted" href="#">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>perfil">
             <i class="fas fa-user"></i> Perfil</a>
           <a class="dropdown-item text-muted" href="encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
