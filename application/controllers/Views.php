@@ -67,8 +67,24 @@ class Views extends CI_Controller {
 		$this->load->view('produtos');
 	}
 
-	public function publicacao() {
-		$this->load->view('publicacao');
+	public function publicacao($id) {
+		//$this->load->view('publicacao');
+
+		$this->load->model('Publicacoes_model');
+
+		$dados = array(
+			'titulo' => $this->load->model('Publicacoes_model', 'puxarTitulo'),
+			'descricao' => $this->load->model('Publicacoes_model', 'puxarDescricao'),
+			'texto' => $this->load->model('Publicacoes_model', 'puxarTexto'),
+			'data' => $this->load->model('Publicacoes_model', 'puxarData')
+			 //$this->Publicacoes_model->puxarTitulo($id),
+			// 'descricao' => $this->Publicacoes_model->puxarDescricao($id),
+			// 'texto' => $this->Publicacoes_model->puxarTexto($id),
+			// 'data' => $this->Publicacoes_model->puxarData($id)
+		);
+
+		$this->load->view('publicacao', $dados);
+		
 	}
 
 }

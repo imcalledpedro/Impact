@@ -14,9 +14,10 @@ $route['dashboard_publicacoes'] = 'Views/dpublicacoes';
 
 $route['index'] = 'Home/index';
 $route['produtos'] = 'Views/produtos';
-$route['publicacao'] = 'Views/publicacao';
+// $route['publicacao'] = 'Views/publicacao';
+$route['publicacao'] = 'Home/exibirPublicacao';
 
-$route['perfil'] = 'Usuario/perfil';
+$route['perfil'] = 'Usuario/exibirDados';
 $route['encerrar'] = 'Usuario/encerrar';
 
 

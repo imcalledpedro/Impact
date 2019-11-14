@@ -22,4 +22,30 @@ class Publicacoes_model extends CI_Model
 
 		return $contador;
 	}
+
+	public function puxarTitulo($id) {
+		$query = $this->db->query("SELECT titulo FROM publicacoes WHERE id = '".$id."'");
+		$row = $query->row();
+		return $row->titulo;
+	}
+	public function puxarDescricao($id) {
+		$query = $this->db->query("SELECT descricao FROM publicacoes WHERE id = '".$id."'");
+		$row = $query->row();
+		return $row->descricao;
+
+	}
+	public function puxarTexto($id) {
+		$query = $this->db->query("SELECT texto_completo FROM publicacoes WHERE id = '".$id."'");
+		$row = $query->row();
+		return $row->texto;
+		// return $query;
+
+	}
+	public function puxarData($id) {
+		$query = $this->db->query("SELECT data_publicacao FROM publicacoes WHERE id = '".$id."'");
+		// $row = $query->row();
+		// return $row->data;
+		return $query;
+
+	}
 }

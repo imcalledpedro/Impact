@@ -27,4 +27,15 @@ class Usuario_model extends CI_Model {
 		$row = $query->row();
 		return $row->name;
 	}
+
+	public function puxarSenhadoCara($email) {
+		// $this->db->select('name');
+		// $this->db->where('email', $email);
+		// $nomeDoCara = $this->db->get('usuarios');
+		// return $nomeDoCara;
+		$query = $this->db->query("SELECT password FROM usuarios WHERE email = '".$email."'");
+		$row = $query->row();
+		return $row->password;
+	}
+
 }
