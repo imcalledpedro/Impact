@@ -63,9 +63,6 @@ class Views extends CI_Controller {
 		$this->load->view('cadastro');
 	}
 
-	public function produtos() {
-		$this->load->view('produtos');
-	}
 
 	public function publicacao($id) {
 		//$this->load->view('publicacao');
@@ -84,7 +81,27 @@ class Views extends CI_Controller {
 		);
 
 		$this->load->view('publicacao', $dados);
-		
 	}
+
+	public function produtos($id) {
+		//$this->load->view('publicacao');
+
+		$this->load->model('Produtos_model');
+
+		$dados = array(
+			'nome' => $this->load->model('Produtos_model', 'puxarNome'),
+			'descricao' => $this->load->model('Produtos_model', 'puxarDescricao'),
+			'categoria' => $this->load->model('Produtos_model', 'puxarCategoria'),
+			'link1' => $this->load->model('Produtos_model', 'puxarLink1'),
+			'link2' => $this->load->model('Produtos_model', 'puxarLink2'),
+			'link3' => $this->load->model('Produtos_model', 'puxarLink3'),
+			'link4' => $this->load->model('Produtos_model', 'puxarLink4'),
+			'link_imagem' => $this->load->model('Produtos_model', 'puxarImagem'),
+		);
+
+		$this->load->view('produtos', $dados);
+	}
+
+
 
 }

@@ -20,6 +20,14 @@ class Home extends CI_Controller {
 		$this->load->view('publicacao', $data);
 	}
 
+	public function produtos() {
+		$this->load->model('Produtos_model', 'produtos');
+
+		$data['produtos'] = $this->produtos->getProdutos();
+
+		$this->load->view('produtos', $data);
+	}
+
 	public function deletarProduto() {
 		$id = $this->input->get('id');
 		$this->db->where('id', $id);
@@ -47,6 +55,24 @@ class Home extends CI_Controller {
 		);
 
 		$this->load->view('publicacao', $dados);
+	}
+
+	public function exibirProduto() {
+		$id = $this->input->get('id');
+
+		$this->load->model('Produtos_model');
+		
+		$dados = array(
+			'titulo' => $this->Produtos_model->puxarNome($id),
+			'descricao' => $this->Produtos_model->puxarDescricao($id),
+			'categoria' => $this->Produtos_model->puxarCategoria($id),
+			'link1' => $this->Produtos_model->puxarLink1($id),
+			'link2' => $this->Produtos_model->puxarLink2($id),
+			'link3' => $this->Produtos_model->puxarLink3($id),
+			'link4' => $this->Produtos_model->puxarLink4($id),
+		);
+
+		$this->load->view('produto', $dados);
 	}
 
 }

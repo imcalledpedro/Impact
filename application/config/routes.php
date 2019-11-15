@@ -13,8 +13,8 @@ $route['dashboard_produtos'] = 'Views/dprodutos';
 $route['dashboard_publicacoes'] = 'Views/dpublicacoes';
 
 $route['index'] = 'Home/index';
-$route['produtos'] = 'Views/produtos';
-// $route['publicacao'] = 'Views/publicacao';
+$route['produtos'] = 'Home/produtos';
+
 $route['publicacao'] = 'Home/exibirPublicacao';
 
 $route['perfil'] = 'Usuario/exibirDados';

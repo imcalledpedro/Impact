@@ -119,38 +119,6 @@
         </div>
     </section>
 
-    <section class="mt-5">
-        <h1 class="text-center mt-5 mb-5">Contato</h1>
-        <div class="col-5 mt-5 mx-auto"><hr></div>
-        <div class="container mt-5">
-            <div class="row">
-              <div class="card mx-auto mb-5 shadow border-right-0 border-bottom-0 border-top-0 border-info">
-                <div class="card-body">
-                  <form>
-                    <div class="row">
-                      <div class="col mb-3">
-                        <input type="text" class="form-control" placeholder="Nome">
-                      </div>
-                      <div class="col mb-3">
-                        <input type="text" class="form-control" placeholder="Sobrenome">
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <input type="text" class="form-control" placeholder="Assunto">
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <textarea class="form-control" placeholder="Mensagem" rows="3"></textarea>
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <button type="submit" class="btn btn-info shadow-lg">Enviar</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-        </div>
-    </section>
-
     <footer class="footer mt-auto py-3 bg-info">
       <div class="container text-center">
         <span class="text-white">Projeto Impact - IFRN - <i>Campus</i> Natal - Zona Norte</span><br>

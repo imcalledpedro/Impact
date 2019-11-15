@@ -78,6 +78,32 @@
 
 
     <section id="Home">
+      <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="<?php echo base_url();?>/assets/img/bird.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="<?php echo base_url();?>/assets/img/bird.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="<?php echo base_url();?>/assets/img/bird.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
         <!-- Transformar isso em um carrosel de imagens (anuncios) -->
         <!-- <div class="container-fluid mt-4">
             <div class="carousel bg-info shadow-lg rounded-lg p-5">
@@ -87,7 +113,7 @@
                         <h2 class="text-center text-white">Coloque aqui os anúncios (carrousel com slide)</h2>
                     </div>
                     <div class="col-md-6">
-                        <img src="<?php echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
+                        <img src="<?php //echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
                     </div>
                 </div>
                 <span id="publicacoes"></span>
@@ -107,23 +133,15 @@
                 <div class="row">
 
                   <?php $contador = 0;
-                      foreach ($publicacoes as $publicacao) { ?>
-                        <!-- Card de Postagem -->
-                        <div class="col-md-10 mx-auto">
-                          <div class="card mb-3 border-left border-info border-top-0 border-bottom-0 border-right-0 shadow">
-                            <div class="card-body">
-                              <h5 class="card-title"><?php echo $publicacao->titulo ?></h5>
-                              <p class="card-text"><small><?php echo $publicacao->descricao ?></small></p>
-                              <a href="publicacao/?id=<?php echo $publicacao->id;?>" class="btn btn-info shadow">Continuar lendo</a>
-                              <p class="card-text text-right"><small class="text-muted"><?php 
-                                $sampleDate = $publicacao->data_publicacao;
-                                $convertDate = date("d/m/Y", strtotime($sampleDate));                                  
-                                echo "Data de publicação: ",$convertDate;
-                               ?></small></p>
-                            </div>
+                      foreach ($produtos as $produto) { ?>
+                        <div class="card mx-1" style="width: 18rem;">
+                          <img src="<?php echo $produto->link_imagem; ?>" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><?php echo $produto->nome; ?></h5>
+                            <p class="card-text"><?php echo $produto->descricao; ?></p>
+                            <a href="#" class="btn btn-primary">Ver produto</a>
                           </div>
                         </div>
-                        <!-- FIM Card de Postagem -->
                   <?php $contador++;}?>
                 </div><span id="contato"></span>
             </div>
