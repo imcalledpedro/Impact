@@ -32,7 +32,7 @@ class Home extends CI_Controller {
 		$id = $this->input->get('id');
 		$this->db->where('id', $id);
 		$this->db->delete('produtos');
-		redirect('produtos');
+		redirect('dashboard_produtos');
 	}
 
 	public function deletarPublicacao() {

@@ -81,6 +81,7 @@
               <!-- nome -->
               <div class="card-header bg-transparent border-0">
                 <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
+                <a href="produtos"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
               </div>
               <!-- tabela -->
               <div class="card-body">

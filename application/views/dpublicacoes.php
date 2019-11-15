@@ -81,6 +81,7 @@
               <!-- nome -->
               <div class="card-header bg-transparent border-0">
                 <h5><i class="fas fa-columns"></i> Publicações</h5>
+                <a href="<?php echo base_url(); ?>#publicacoes"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
               </div>
               <!-- tabela -->
               <div class="card-body">
