@@ -83,7 +83,7 @@
      ?>
 
     <div class="container-fluid p-0 pt-1">
-      <div class="row col-12 m-3">
+      <div class="row col-12 mx-auto mt-3">
         <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
           <div class="card-body px-5 py-5 text-center">
             <h1><span class="badge badge-info"><?php echo $nPublicacoes->num_rows(); ?></span></h1>
