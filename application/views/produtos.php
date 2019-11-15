@@ -38,7 +38,7 @@
       }
     </style>
 
-    <title>Home | IMPACT</title>
+    <title>Produtos | IMPACT</title>
   </head>
   <body class=" mt-5 pt-1">
 
@@ -60,17 +60,17 @@
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 	    <ul class="navbar-nav ml-auto mr-5">
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo base_url(); ?>">Home</a>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="<?php echo base_url(); ?>#publicacoes" data-smooth="#publicacoes">Publicações</a>
+	      </li>
 	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#publicacoes" data-smooth="#publicacoes">Publicações</a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="produtos">Produtos</a>
+	        <a class="nav-link" href="#">Produtos</a>
 	      </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contato">Contato</a>
+          <a class="nav-link" href="<?php echo base_url(); ?>#contato">Contato</a>
         </li>
 	    </ul>
 	  </div>
@@ -78,12 +78,13 @@
 
 
     <section id="Home">
-        <div class="container-fluid mt-4">
+        <!-- Transformar isso em um carrosel de imagens (anuncios) -->
+        <!-- <div class="container-fluid mt-4">
             <div class="carousel bg-info shadow-lg rounded-lg p-5">
                 <div class="row align-items-center">
                     <div class="col-md-6">
 
-                        <h2 class="text-center text-white">Nós lutamos contra <br>o mundo plastificado.</h2>
+                        <h2 class="text-center text-white">Coloque aqui os anúncios (carrousel com slide)</h2>
                     </div>
                     <div class="col-md-6">
                         <img src="<?php echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
@@ -91,14 +92,14 @@
                 </div>
                 <span id="publicacoes"></span>
             </div>
-        </div>
+        </div> -->
     </section>
 
     
 
     <section class="mt-5">
 
-        <h1 class="text-center mt-5 mb-5">Publicações</h1>
+        <h1 class="text-center mt-5 mb-5">Produtos</h1>
         <div class="col-5 mt-5 mx-auto"><hr></div>
 
         <div class="container-fluid my-5">
@@ -125,38 +126,6 @@
                         <!-- FIM Card de Postagem -->
                   <?php $contador++;}?>
                 </div><span id="contato"></span>
-            </div>
-        </div>
-    </section>
-
-    <section class="mt-5">
-        <h1 class="text-center mt-5 mb-5">Contato</h1>
-        <div class="col-5 mt-5 mx-auto"><hr></div>
-        <div class="container mt-5">
-            <div class="row">
-              <div class="card mx-auto mb-5 shadow border-right-0 border-bottom-0 border-top-0 border-info">
-                <div class="card-body">
-                  <form>
-                    <div class="row">
-                      <div class="col mb-3">
-                        <input type="text" class="form-control" placeholder="Nome">
-                      </div>
-                      <div class="col mb-3">
-                        <input type="text" class="form-control" placeholder="Sobrenome">
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <input type="text" class="form-control" placeholder="Assunto">
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <textarea class="form-control" placeholder="Mensagem" rows="3"></textarea>
-                      </div>
-                      <div class="col-md-12 mb-3">
-                        <button type="submit" class="btn btn-info shadow-lg">Enviar</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
             </div>
         </div>
     </section>

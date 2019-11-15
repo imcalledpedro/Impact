@@ -61,13 +61,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto mr-5">
         <li class="nav-item">
-          <a class="nav-link" href="<?php base_url();?>/Impact">Home</a>
+          <a class="nav-link" href="<?php echo base_url();?>">Home</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link" href="#publicacoes" data-smooth="#publicacoes">Publicações</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="produtos">Produtos</a>
+          <a class="nav-link" href="<?php echo base_url(); ?>produtos">Produtos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contato">Contato</a>
@@ -75,9 +75,6 @@
       </ul>
     </div>
   </nav>
-
-  <?php $this->input->get('id', TRUE); ?>
-
     <section id="Home">
         <div class="container-fluid mt-4">
             <div class="carousel bg-info shadow-lg rounded-lg p-5">
@@ -100,6 +97,7 @@
     <section class="mt-5">
 
         <h1 class="text-center mt-5 mb-5"><?php echo $titulo; ?></h1>
+        <p class="text-center text-muted col-8 mx-auto"><?php echo $descricao ?></p>
         <div class="col-5 mt-5 mx-auto"><hr></div>
 
         <div class="container-fluid my-5">
@@ -107,8 +105,9 @@
                 <div class="row">
                         <!-- Card de Postagem -->
                         <div class="col-md-10 mx-auto">
-                          <div class="card mb-3 border-left border-info border-top-0 border-bottom-0 border-right-0 shadow">
+                          <div class=" mb-3">
                             <div class="card-body">
+
                               <p class="card-text"><?php echo $texto;?></p>
                             </div>
                           </div>

@@ -37,8 +37,8 @@ class Publicacoes_model extends CI_Model
 	public function puxarTexto($id) {
 		$query = $this->db->query("SELECT texto_completo FROM publicacoes WHERE id = '".$id."'");
 		$row = $query->row();
-		return $row->texto;
-		// return $query;
+		return $row->texto_completo;
+		//return $query->texto;
 
 	}
 	public function puxarData($id) {
