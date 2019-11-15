@@ -81,14 +81,19 @@
           <div class="col-12">
             <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
               <!-- nome -->
-              <div class="card-header bg-transparent border-0">
-                <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
-                <a href="produtos"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+              <div class="card-header bg-transparent border-0 mx-3">
+                <div class="row">
+                  <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
+                  <a href="adicionarProduto" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
+                </div>
+                <div class="row">
+                  <a href="produtos" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+                </div>
               </div>
               <!-- tabela -->
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-hover text-center ">
+                  <table class="table table-hover text-center table-bordered">
                     <thead>
                       <tr>
                         <th scope="col">Nome</th>
@@ -107,8 +112,8 @@
                             <td><?php echo $produto->descricao; ?></td>
                             <td><?php echo $produto->categoria; ?></td>
                             <td>
-                              <a class="text-info" href="/produtos/editar/<?php echo $produto->id; ?>"><i class="fas fa-edit m-1"></i></a>
-                              <a class="text-info" href="deletarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash-alt m-1"></i></a>
+                              <a class="text-info" href="editarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-pen text-warning"></i></a>
+                              <a class="text-info" href="deletarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash text-danger"></i></a>
                             </td>
                           </tr>
                       <?php $contador++;

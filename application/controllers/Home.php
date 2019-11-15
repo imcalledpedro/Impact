@@ -28,6 +28,21 @@ class Home extends CI_Controller {
 		$this->load->view('produtos', $data);
 	}
 
+	public function adicionarProduto(){
+		$this->load->view('d_adicionarproduto');
+	}
+
+	public function adicionarPublicacao(){
+		$this->load->view('d_adicionarpublicacao');
+	}
+
+	public function editarProduto(){
+		$this->load->view('d_editarproduto');
+	}
+	public function editarPublicacao(){
+		$this->load->view('d_editarpublicacao');
+	}
+
 	public function deletarProduto() {
 		$id = $this->input->get('id');
 		$this->db->where('id', $id);
@@ -39,7 +54,7 @@ class Home extends CI_Controller {
 		$id = $this->input->get('id');
 		$this->db->where('id', $id);
 		$this->db->delete('publicacoes');
-		redirect('publicacoes');
+		redirect('dashboard_publicacoes');
 	}
 
 	public function exibirPublicacao() {

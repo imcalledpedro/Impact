@@ -20,6 +20,10 @@ $route['publicacao'] = 'Home/exibirPublicacao';
 $route['perfil'] = 'Usuario/exibirDados';
 $route['encerrar'] = 'Usuario/encerrar';
 
-
-$route['deletarProduto'] = 'Home/deletarProduto';
+$route['adicionarPublicacao'] = 'Home/adicionarPublicacao';
+$route['editarPublicacao'] = 'Home/editarPublicacao';
 $route['deletarPublicacao'] = 'Home/deletarPublicacao';
+
+$route['adicionarProduto'] = 'Home/adicionarProduto';
+$route['editarProduto'] = 'Home/editarProduto';
+$route['deletarProduto'] = 'Home/deletarProduto';

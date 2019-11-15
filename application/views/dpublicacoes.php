@@ -79,14 +79,19 @@
           <div class="col-12">
             <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
               <!-- nome -->
-              <div class="card-header bg-transparent border-0">
-                <h5><i class="fas fa-columns"></i> Publicações</h5>
-                <a href="<?php echo base_url(); ?>#publicacoes"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+              <div class="card-header bg-transparent border-0 mx-3">
+                <div class="row">
+                  <h5><i class="fas fa-columns"></i> Publicações</h5>
+                  <a href="adicionarPublicacao" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
+                </div>
+                <div class="row">
+                  <a href="<?php echo base_url(); ?>#publicacoes" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+                </div>
               </div>
               <!-- tabela -->
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-hover text-center">
+                  <table class="table table-hover text-center table-bordered">
                     <thead>
                       <tr>
                         <th scope="col">Título</th>
@@ -107,17 +112,28 @@
                             <td><?php echo $publicacao->data_publicacao; ?></td>
                             <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
                             <td>
-                              <a class="text-info" href="editarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-edit"></i></a>
-                              <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash-alt"></i></a>
+                              <a class="text-info" href="editarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
+
+                              <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
+                              
+
+                              <!-- Button trigger modal -->
+                              <!-- <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
+                                <i class="fas fa-trash" title="Deletar"></i>
+                              </a>-->
+
+
+                              
                             </td>
                           </tr>
                       <?php $contador++;
                         }
                       ?>
+
                     </tbody>
                   </table>
                   <div class="col text-muted">
-                      Registros: <?php echo $contador ?>
+                      Registros: <?php echo $contador; ?>
                   </div>
                 </div>
               </div>
@@ -126,18 +142,27 @@
           <!-- fim card tabela -->
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- Modal -->
+                              <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-sm" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Excluir Publicação</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Deseja excluir a publicação permanentemente?
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                      <a href="deletarPublicacao/?id=<?php //echo ${"modal$publicacao->id"}; ?>" class="btn btn-danger">Excluir</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div> -->
+    
 
 
 

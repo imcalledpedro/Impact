@@ -134,7 +134,7 @@
 
                   <?php $contador = 0;
                       foreach ($produtos as $produto) { ?>
-                        <div class="card mx-1" style="width: 18rem;">
+                        <div class="card mx-1 shadow p-2" style="width: 18rem;">
                           <img src="<?php echo $produto->link_imagem; ?>" class="card-img-top" alt="...">
                           <div class="card-body">
                             <h5 class="card-title"><?php echo $produto->nome; ?></h5>
