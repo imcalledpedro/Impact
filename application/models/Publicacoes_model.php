@@ -43,9 +43,9 @@ class Publicacoes_model extends CI_Model
 	}
 	public function puxarData($id) {
 		$query = $this->db->query("SELECT data_publicacao FROM publicacoes WHERE id = '".$id."'");
-		// $row = $query->row();
+		$row = $query->row();
 		// return $row->data;
-		return $query;
+		return $row->data_publicacao;
 
 	}
 }

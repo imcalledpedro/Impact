@@ -98,7 +98,16 @@
 
         <h1 class="text-center mt-5 mb-5"><?php echo $titulo; ?></h1>
         <p class="text-center text-muted col-8 mx-auto"><?php echo $descricao ?></p>
-        <div class="col-5 mt-5 mx-auto"><hr></div>
+        
+        <div class="col-5 mt-5 mx-auto">
+          <p class="text-center text-muted col-8 mx-auto"><small>
+          <?php 
+            $sampleDate = $data;
+            $convertDate = date("d/m/Y", strtotime($sampleDate));                                  
+            echo "Data de publicação: ",$convertDate;
+          ?>
+        </small></p>
+        <hr></div>
 
         <div class="container-fluid my-5">
             <div class="container">

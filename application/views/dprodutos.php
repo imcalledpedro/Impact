@@ -43,7 +43,9 @@
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
         <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Pedro Lucas</span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+              <?php echo $this->session->userdata('nome'); ?>
+            </span>
             <i class="fas fa-user"></i>
             <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>

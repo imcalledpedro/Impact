@@ -147,7 +147,7 @@
                         <input type="text" class="form-control" placeholder="Assunto">
                       </div>
                       <div class="col-md-12 mb-3">
-                        <textarea class="form-control" placeholder="Mensagem" rows="3"></textarea>
+                        <textarea class="form-control" placeholder="Mensagem" rows="5"></textarea>
                       </div>
                       <div class="col-md-12 mb-3">
                         <button type="submit" class="btn btn-info shadow-lg">Enviar</button>

@@ -50,6 +50,7 @@
             <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <div class="dropdown-divider"></div>
           <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>perfil">
             <i class="fas fa-user"></i> Perfil</a>
           <a class="dropdown-item text-muted" href="encerrar">
@@ -104,7 +105,56 @@
 
 
 
+    <!-- <script type="text/javascript">
 
+      $(function(){
+
+        const nightModeStorage = localStorage.getItem('NightMode')
+
+        // caso tenha o valor no localStorage
+        if (nightModeStorage) {
+          $('.navbar').toggleClass('bg-light navbar-light');
+          $('.navbar').toggleClass('bg-dark navbar-dark');
+          $('body').toggleClass('bg-dark text-white');
+          $('.card').toggleClass('bg-dark');
+          $('.card').toggleClass('border-top-0 border-bottom-0 border-right-0');
+          $('input').toggleClass('bg-dark text-white border-info');
+          $('textarea').toggleClass('bg-dark text-white border-info');
+          if ($('.navbar').hasClass('bg-dark')) {
+            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo-white.png');
+          }else{
+            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo.png');
+          }
+        }
+
+        $('#dark-mode').click(function(event) {
+          event.preventDefault();
+          $('.navbar').toggleClass('bg-light navbar-light');
+          $('.navbar').toggleClass('bg-dark navbar-dark');
+          $('body').toggleClass('bg-dark text-white');
+          $('.card').toggleClass('bg-dark');
+          $('.card').toggleClass('border-top-0 border-bottom-0 border-right-0');
+          $('input').toggleClass('bg-dark text-white border-info');
+          $('textarea').toggleClass('bg-dark text-white border-info');
+          if ($('.navbar').hasClass('bg-dark')) {
+            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo-white.png');
+          }else{
+            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo.png');
+          }
+
+          if ($(".card").hasClass('bg-dark')) {
+            // salva o tema no localStorage
+            localStorage.setItem('NightMode', true)
+            return
+          } else {
+            // senão remove
+          localStorage.removeItem('NightMode')
+          }
+          
+        });
+
+      });
+    </script> -->
 
 
 
