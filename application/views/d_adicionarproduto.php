@@ -55,7 +55,7 @@
       </div> 
     </nav>
 
-    <div class="container  mt-5 pt-1">
+    <div class="container  mt-1 pt-1">
       <div class="row">
         <div class="col-md-8 col-sm-12 mx-auto">
 

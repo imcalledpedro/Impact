@@ -40,14 +40,14 @@ class Home extends CI_Controller {
 		$id = $this->input->get('id');
 		$this->db->where('id', $id);
 		$this->db->delete('produtos');
-		redirect('dashboard_produtos');
+		redirect('dashboard/produtos');
 	}
 
 	public function deletarPublicacao() {
 		$id = $this->input->get('id');
 		$this->db->where('id', $id);
 		$this->db->delete('publicacoes');
-		redirect('dashboard_publicacoes');
+		redirect('dashboard/publicacoes');
 	}
 
 	public function exibirPublicacao() {

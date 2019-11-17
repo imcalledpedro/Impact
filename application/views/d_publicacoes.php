@@ -80,7 +80,7 @@
               <div class="card-header bg-transparent border-0 mx-3">
                 <div class="row">
                   <h5><i class="fas fa-columns"></i> Publicações</h5>
-                  <a href="adicionarPublicacao" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
+                  <a href="<?php echo base_url(); ?>dashboard/publicacoes/adicionar" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
                 </div>
                 <div class="row">
                   <a href="<?php echo base_url(); ?>#publicacoes" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
@@ -110,9 +110,9 @@
                             <td><?php echo $publicacao->data_publicacao; ?></td>
                             <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
                             <td>
-                              <a class="text-info" href="editarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
+                              <a class="text-info" href="<?php echo base_url() ?>dashboard/publicacoes/editar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
 
-                              <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
+                              <a class="text-info" href="<?php echo base_url() ?>dashboard/publicacoes/deletar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
                               
                               <!-- Button trigger modal -->
                               <!-- <a class="text-danger" data-toggle="modal" data-target="#exampleModal">

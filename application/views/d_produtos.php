@@ -82,10 +82,14 @@
               <div class="card-header bg-transparent border-0 mx-3">
                 <div class="row">
                   <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
-                  <a href="adicionarProduto" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
+                  <a href="<?php echo base_url(); ?>dashboard/produtos/adicionar" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
                 </div>
                 <div class="row">
+
+                  <!-- CORRIGIR HREF -->
                   <a href="produtos" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+                  <!-- CORRIGIR -->
+
                 </div>
               </div>
               <!-- tabela -->
@@ -110,8 +114,8 @@
                             <td><?php echo $produto->descricao; ?></td>
                             <td><?php echo $produto->categoria; ?></td>
                             <td>
-                              <a class="text-info" href="editarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-pen text-warning"></i></a>
-                              <a class="text-info" href="deletarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash text-danger"></i></a>
+                              <a class="text-info" href="<?php echo base_url() ?>dashboard/produtos/editar/?id=<?php echo $produto->id; ?>"><i class="fas fa-pen text-warning"></i></a>
+                              <a class="text-info" href="<?php echo base_url() ?>dashboard/produtos/deletar/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash text-danger"></i></a>
                             </td>
                           </tr>
                       <?php $contador++;

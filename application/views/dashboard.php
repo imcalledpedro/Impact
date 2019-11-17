@@ -79,20 +79,35 @@
     ?>
 
     <div class="container-fluid p-0 pt-1">
-      <div class="row col-12 mx-auto mt-3">
-        <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
-          <div class="card-body px-5 py-5 text-center">
-            <h1><span class="badge badge-info"><?php echo $nPublicacoes->num_rows(); ?></span></h1>
-            <i class="fas fa-columns"></i> Pulicações no blog
-          </div>
+      <div class="container-fluid mt-3">
+            <div class="carousel bg-info shadow-lg rounded-lg p-5">
+                <div class="row justify-content-center align-items-center">
+                  <div class="col-md-6">
+                    <div class="col-md-12 ">
+                      <h2 class="text-center text-white">Nós lutamos contra <br>o mundo plastificado.</h2>
+                    </div>
+                    <div class="col-md-6 mx-auto">
+                      <img src="<?php echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
+                      <div class="card-body px-5 py-5 text-center">
+                        <h1><span class="badge badge-info"><?php echo $nPublicacoes->num_rows(); ?></span></h1>
+                        <i class="fas fa-columns"></i> Pulicações no blog
+                      </div>
+                    </div>
+                    <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
+                        <div class="card-body px-5 py-5 text-center">
+                          <h1><span class="badge badge-info"><?php echo $nProdutos->num_rows(); ?></span></h1>
+                          <i class="fas fa-shopping-basket"></i> Produtos cadastrados             
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                <span id="publicacoes"></span>
+            </div>
         </div>
-        <div class="card shadow m-2 border-top-0 border-right-0 border-bottom-0 border-info">
-          <div class="card-body px-5 py-5 text-center">
-            <h1><span class="badge badge-info"><?php echo $nProdutos->num_rows(); ?></span></h1>
-            <i class="fas fa-shopping-basket"></i> Produtos cadastrados             
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Optional JavaScript -->
