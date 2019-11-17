@@ -50,7 +50,7 @@ class Usuario extends CI_Controller {
 		$nome = $this->Usuario_model->puxarNomeDoCara($email);
 		$senha = $this->Usuario_model->puxarSenhaDoCara($email);
 		$dados = array('nome' => $nome, 'email' => $email,'senha' => $senha,);
-		$this->load->view('dperfil', $dados);
+		$this->load->view('d_perfil', $dados);
 	}
 
 	public function editarDados() {

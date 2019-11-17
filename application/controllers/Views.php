@@ -19,7 +19,7 @@ class Views extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$this->load->model('produtos_model', 'produtos');
 			$data['produtos'] = $this->produtos->getProdutos();
-			$this->load->view('dprodutos', $data);
+			$this->load->view('d_produtos', $data);
 		}else {
 			#code...
 		}
@@ -29,7 +29,7 @@ class Views extends CI_Controller {
 		if (isset($_SESSION['login'])) {
 			$this->load->model('publicacoes_model', 'publicacoes');
 			$data['publicacoes'] = $this->publicacoes->getPublicacoes();
-			$this->load->view('dpublicacoes', $data);
+			$this->load->view('d_publicacoes', $data);
 		}else {
 			#code...
 		}

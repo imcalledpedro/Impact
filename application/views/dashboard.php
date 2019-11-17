@@ -47,7 +47,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <!-- <div class="dropdown-divider"></div> -->
-          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>perfil">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/perfil">
             <i class="fas fa-user"></i> Perfil</a>
           <a class="dropdown-item text-muted" href="encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
@@ -60,14 +60,14 @@
       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link text-info" href="dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
+            <a class="nav-link text-info" href="<?php echo base_url(); ?>dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="dashboard_publicacoes"><i class="fas fa-columns"></i> Publicações</a>
+            <a class="nav-link text-secondary" href="<?php echo base_url(); ?>dashboard/publicacoes"><i class="fas fa-columns"></i> Publicações</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="dashboard_produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
+            <a class="nav-link text-secondary" href="<?php echo base_url(); ?>dashboard/produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
           </li>
         </ul>
       </div>

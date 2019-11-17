@@ -39,7 +39,7 @@
       </a>
 
       <!-- Navbar Logo -->
-      <a id="navbar-brand" class="navbar-brand" href="<?php echo base_url(); ?>/dashboard">
+      <a id="navbar-brand" class="navbar-brand" href="<?php echo base_url(); ?>dashboard">
         <img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30">
       </a>
 

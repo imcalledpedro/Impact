@@ -42,11 +42,13 @@
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
         <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nome'); ?></span>
+            <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+              <?php echo $this->session->userdata('nome'); ?>
+            </span>
             <i class="fas fa-user"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>perfil">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/perfil">
             <i class="fas fa-user"></i> Perfil</a>
           <a class="dropdown-item text-muted" href="encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
@@ -59,31 +61,31 @@
       <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
+            <a class="nav-link text-secondary" href="<?php echo base_url(); ?>dashboard"><i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-info" href="dashboard_publicacoes"><i class="fas fa-columns"></i> Publicações</a>
+            <a class="nav-link text-secondary" href="<?php echo base_url(); ?>dashboard/publicacoes"><i class="fas fa-columns"></i> Publicações</a>
           </li>
           
           <li class="nav-item">
-            <a class="nav-link text-secondary" href="dashboard_produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
+            <a class="nav-link text-info" href="<?php echo base_url(); ?>dashboard/produtos"><i class="fas fa-shopping-basket"></i> Produtos</a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <div class="container-fluid p-0 pt-1">
+    <div class="container-fluid p-0 pt-1 .bg-light">
       <!-- Card Tabela -->
           <div class="col-12">
             <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
               <!-- nome -->
               <div class="card-header bg-transparent border-0 mx-3">
                 <div class="row">
-                  <h5><i class="fas fa-columns"></i> Publicações</h5>
-                  <a href="adicionarPublicacao" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
+                  <h5><i class="fas fa-shopping-basket"></i> Produtos</h5>
+                  <a href="adicionarProduto" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
                 </div>
                 <div class="row">
-                  <a href="<?php echo base_url(); ?>#publicacoes" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+                  <a href="produtos" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
                 </div>
               </div>
               <!-- tabela -->
@@ -92,10 +94,9 @@
                   <table class="table table-hover text-center table-bordered">
                     <thead>
                       <tr>
-                        <th scope="col">Título</th>
+                        <th scope="col">Nome</th>
                         <th scope="col">Descrição</th>
-                        <th scope="col">Data</th>
-                        <th scope="col">Anexo</th>
+                        <th scope="col">Categoria</th>
                         <th scope="col">Ações</th>
                       </tr>
                     </thead>
@@ -103,33 +104,24 @@
 
                       <?php
                         $contador = 0;
-                        foreach ($publicacoes as $publicacao) { ?>
+                        foreach ($produtos as $produto) { ?>
                           <tr>
-                            <td><?= $publicacao->titulo; ?></td>
-                            <td><?php echo $publicacao->descricao; ?></td>
-                            <td><?php echo $publicacao->data_publicacao; ?></td>
-                            <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
+                            <td><?= $produto->nome; ?></td>
+                            <td><?php echo $produto->descricao; ?></td>
+                            <td><?php echo $produto->categoria; ?></td>
                             <td>
-                              <a class="text-info" href="editarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
-
-                              <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
-                              
-                              <!-- Button trigger modal -->
-                              <!-- <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
-                                <i class="fas fa-trash" title="Deletar"></i>
-                              </a>-->
-
+                              <a class="text-info" href="editarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-pen text-warning"></i></a>
+                              <a class="text-info" href="deletarProduto/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash text-danger"></i></a>
                             </td>
                           </tr>
                       <?php $contador++;
                         }
                       ?>
-
                     </tbody>
                   </table>
-                  <div class="col text-muted">
-                      Registros: <?php echo $contador; ?>
-                  </div>
+                    <div class="col text-muted">
+                      Registros: <?php echo $contador ?>
+                    </div>
                 </div>
               </div>
             </div>
@@ -137,27 +129,6 @@
           <!-- fim card tabela -->
     </div>
 
-<!-- Modal -->
-                              <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-sm" role="document">
-                                  <div class="modal-content">
-                                    <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLabel">Excluir Publicação</h5>
-                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                      </button>
-                                    </div>
-                                    <div class="modal-body">
-                                      Deseja excluir a publicação permanentemente?
-                                    </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                      <a href="deletarPublicacao/?id=<?php //echo ${"modal$publicacao->id"}; ?>" class="btn btn-danger">Excluir</a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div> -->
-                              
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
