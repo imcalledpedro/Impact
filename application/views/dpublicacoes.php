@@ -39,13 +39,11 @@
         <i class="fas fa-bars"></i></i></a>
       </a>
 
-
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
         <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nome'); ?></span>
             <i class="fas fa-user"></i>
-            <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>perfil">
@@ -116,14 +114,11 @@
 
                               <a class="text-info" href="deletarPublicacao/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
                               
-
                               <!-- Button trigger modal -->
                               <!-- <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
                                 <i class="fas fa-trash" title="Deletar"></i>
                               </a>-->
 
-
-                              
                             </td>
                           </tr>
                       <?php $contador++;
@@ -162,11 +157,7 @@
                                   </div>
                                 </div>
                               </div> -->
-    
-
-
-
-
+                              
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

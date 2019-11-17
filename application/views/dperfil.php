@@ -27,8 +27,6 @@
       .text-info{color: #5092c2 !important;}
       body{
         font-family: 'Lexend Deca', sans-serif;
-        //background: #007bff!important;
-        //background: linear-gradient(to right, #0062E6, #33AEFF);
       }
     </style>
 
@@ -51,7 +49,6 @@
               <?php echo $this->session->userdata('nome'); ?>
             </span>
             <i class="fas fa-user"></i>
-            <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="<?php echo base_url();?>dashboard">
@@ -65,7 +62,6 @@
     <div class="container  mt-5 pt-1">
       <div class="row">
         <div class="col-md-6 col-sm-12 mx-auto">
-
           <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
             <!-- Editar perfil -->
               <div class="card-header bg-transparent border-0">
@@ -99,31 +95,11 @@
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>
 
               </form>
-              </div>
-
-
-           
+              </div>           
           </div> 
-          
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

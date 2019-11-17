@@ -53,11 +53,7 @@
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Cadastrar</button>
 
                 <a class="d-block text-info text-center mt-2 small" href="login">Já possui cadastro? Faça Login</a>
-
-                <!-- LOGIN USANDO GOOGLE E FACEBOOK -->
-                <!-- <hr class="my-4">
-                <button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i>Login usando Google</button>
-                <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i>Login usando Facebook</button> -->
+                
               </form>
             </div>
           </div>

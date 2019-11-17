@@ -26,8 +26,6 @@
       .text-info{color: #5092c2 !important;}
       body{
         font-family: 'Lexend Deca', sans-serif;
-        //background: #007bff!important;
-        //background: linear-gradient(to right, #0062E6, #33AEFF);
       }
     </style>
 
@@ -39,7 +37,6 @@
         <i class="fas fa-bars"></i></i></a>
       </a>
 
-
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
         <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -47,7 +44,6 @@
               <?php echo $this->session->userdata('nome'); ?>
             </span>
             <i class="fas fa-user"></i>
-            <!-- <img class="img-profile rounded-circle" src=""> -->
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <!-- <div class="dropdown-divider"></div> -->
@@ -80,7 +76,7 @@
     <?php 
       $nProdutos = $this->db->query('SELECT * FROM produtos');
       $nPublicacoes = $this->db->query('SELECT * FROM publicacoes');
-     ?>
+    ?>
 
     <div class="container-fluid p-0 pt-1">
       <div class="row col-12 mx-auto mt-3">
@@ -98,71 +94,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-    <!-- <script type="text/javascript">
-
-      $(function(){
-
-        const nightModeStorage = localStorage.getItem('NightMode')
-
-        // caso tenha o valor no localStorage
-        if (nightModeStorage) {
-          $('.navbar').toggleClass('bg-light navbar-light');
-          $('.navbar').toggleClass('bg-dark navbar-dark');
-          $('body').toggleClass('bg-dark text-white');
-          $('.card').toggleClass('bg-dark');
-          $('.card').toggleClass('border-top-0 border-bottom-0 border-right-0');
-          $('input').toggleClass('bg-dark text-white border-info');
-          $('textarea').toggleClass('bg-dark text-white border-info');
-          if ($('.navbar').hasClass('bg-dark')) {
-            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo-white.png');
-          }else{
-            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo.png');
-          }
-        }
-
-        $('#dark-mode').click(function(event) {
-          event.preventDefault();
-          $('.navbar').toggleClass('bg-light navbar-light');
-          $('.navbar').toggleClass('bg-dark navbar-dark');
-          $('body').toggleClass('bg-dark text-white');
-          $('.card').toggleClass('bg-dark');
-          $('.card').toggleClass('border-top-0 border-bottom-0 border-right-0');
-          $('input').toggleClass('bg-dark text-white border-info');
-          $('textarea').toggleClass('bg-dark text-white border-info');
-          if ($('.navbar').hasClass('bg-dark')) {
-            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo-white.png');
-          }else{
-            $('#logo').attr('src','<?php //echo base_url();?>/assets/img/logo.png');
-          }
-
-          if ($(".card").hasClass('bg-dark')) {
-            // salva o tema no localStorage
-            localStorage.setItem('NightMode', true)
-            return
-          } else {
-            // senão remove
-          localStorage.removeItem('NightMode')
-          }
-          
-        });
-
-      });
-    </script> -->
-
-
-
-
-
-
-
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

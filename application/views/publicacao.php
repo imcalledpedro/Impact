@@ -58,23 +58,24 @@
         <i class="fas fa-bars"></i></i>
       </a>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto mr-5">
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url();?>">Home</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#publicacoes" data-smooth="#publicacoes">Publicações</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url(); ?>produtos">Produtos</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contato">Contato</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mr-5">
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url();?>">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#publicacoes" data-smooth="#publicacoes">Publicações</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url(); ?>produtos">Produtos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
     <section id="Home">
         <div class="container-fluid mt-4">
             <div class="carousel bg-info shadow-lg rounded-lg p-5">
@@ -91,9 +92,7 @@
             </div>
         </div>
     </section>
-
     
-
     <section class="mt-5">
 
         <h1 class="text-center mt-5 mb-5"><?php echo $titulo; ?></h1>

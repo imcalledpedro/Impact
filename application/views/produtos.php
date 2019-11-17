@@ -76,7 +76,6 @@
 	  </div>
 	</nav>
 
-
     <section id="Home">
       <div id="carouselExampleIndicators" class="carousel slide mt-3" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -121,31 +120,28 @@
         </div> -->
     </section>
 
-    
-
     <section class="mt-5">
+      <h1 class="text-center mt-5 mb-5">Produtos</h1>
+      <div class="col-5 mt-5 mx-auto"><hr></div>
 
-        <h1 class="text-center mt-5 mb-5">Produtos</h1>
-        <div class="col-5 mt-5 mx-auto"><hr></div>
+      <div class="container-fluid my-5">
+          <div class="container">
+              <div class="row">
 
-        <div class="container-fluid my-5">
-            <div class="container">
-                <div class="row">
-
-                  <?php $contador = 0;
-                      foreach ($produtos as $produto) { ?>
-                        <div class="card mx-1 shadow p-2" style="width: 18rem;">
-                          <img src="<?php echo $produto->link_imagem; ?>" class="card-img-top" alt="...">
-                          <div class="card-body">
-                            <h5 class="card-title"><?php echo $produto->nome; ?></h5>
-                            <p class="card-text"><?php echo $produto->descricao; ?></p>
-                            <a href="#" class="btn btn-primary">Ver produto</a>
-                          </div>
+                <?php $contador = 0;
+                    foreach ($produtos as $produto) { ?>
+                      <div class="card mx-1 shadow p-2" style="width: 18rem;">
+                        <img src="<?php echo $produto->link_imagem; ?>" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><?php echo $produto->nome; ?></h5>
+                          <p class="card-text"><?php echo $produto->descricao; ?></p>
+                          <a href="#" class="btn btn-primary">Ver produto</a>
                         </div>
-                  <?php $contador++;}?>
-                </div><span id="contato"></span>
-            </div>
-        </div>
+                      </div>
+                <?php $contador++;}?>
+              </div><span id="contato"></span>
+          </div>
+      </div>
     </section>
 
     <footer class="footer mt-auto py-3 bg-info">
