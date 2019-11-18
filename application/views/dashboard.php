@@ -84,7 +84,7 @@
                 <div class="row justify-content-center align-items-center">
                   <div class="col-md-6">
                     <div class="col-md-12 ">
-                      <h2 class="text-center text-white">E aí, <?php echo $this->session->userdata('nome'); ?>! Bem-vindo :D</h2>
+                      <h2 class="text-center text-white">E aí, <?php echo $this->session->userdata('nome'); ?>! Tudo certo? :D</h2>
                     </div>
                     <div class="col-md-6 mx-auto">
                       <img src="<?php echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
