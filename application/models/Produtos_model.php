@@ -16,6 +16,12 @@ class Produtos_model extends CI_Model {
 		return $contador;
 	}
 
+	public function cadastrarProdutos($dados=NULL) {
+		if ($dados!=NULL) {
+			$this->db->insert('produtos',$dados);
+		}redirect('dashboard/produtos');
+	}
+
 	public function puxarNome($id) {
 		$query = $this->db->query("SELECT nome FROM produtos WHERE id = '".$id."'");
 		$row = $query->row();

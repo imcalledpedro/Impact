@@ -15,7 +15,7 @@ class Views extends CI_Controller {
 		}
 	}
 
-	public function dprodutos() {
+	public function d_produtos() {
 		if (isset($_SESSION['login'])) {
 			$this->load->model('produtos_model', 'produtos');
 			$data['produtos'] = $this->produtos->getProdutos();
@@ -25,7 +25,7 @@ class Views extends CI_Controller {
 		}
 	}
 
-	public function dpublicacoes() {
+	public function d_publicacoes() {
 		if (isset($_SESSION['login'])) {
 			$this->load->model('publicacoes_model', 'publicacoes');
 			$data['publicacoes'] = $this->publicacoes->getPublicacoes();

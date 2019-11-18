@@ -48,7 +48,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/perfil">
             <i class="fas fa-user"></i> Perfil</a>
-          <a class="dropdown-item text-muted" href="encerrar">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
       </div> 

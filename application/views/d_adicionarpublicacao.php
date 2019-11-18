@@ -49,7 +49,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="<?php echo base_url();?>dashboard">
             <i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
-          <a class="dropdown-item text-muted" href="encerrar">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
       </div> 
@@ -64,21 +64,31 @@
               </div>
 
               <div class="card-body">
-                 <form class="form-signin" method="post" action="">
+                 <form class="form-signin" method="post" action="<?php echo base_url() ?>dashboard/publicacoes/cadastrar">
 
                 <div class="form-label-group mb-4">
                   <label for="inputTitulo">Título</label>
-                  <input name="titulo" value="<?php  ?>" type="text" id="inputTitulo" class="form-control" placeholder="Titulo">
+                  <input name="titulo" value="<?php  ?>" type="text" id="inputTitulo" class="form-control" placeholder="Insira um título">
                 </div>
 
                 <div class="form-label-group mb-4">
                   <label for="inputDescricao">Descrição</label>
-                  <textarea name="descricao" value="<?php ?>" type="textarea" id="inputDescricao" class="form-control" placeholder="Descrição" rows="3"></textarea>
+                  <textarea name="descricao" value="<?php ?>" type="textarea" id="inputDescricao" class="form-control" placeholder="Insira aqui um breve resumo sobre a publicação" rows="3"></textarea>
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputTexto">Texto</label>
-                  <textarea name="texto_completo" value="<?php ?>" type="text" id="inputTexto" class="form-control" placeholder="Texto" rows="10"></textarea>
+                  <textarea name="texto_completo" value="<?php ?>" type="text" id="inputTexto" class="form-control" placeholder="Insira aqui seu artigo" rows="10"></textarea>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="dataPublicacao">Data de publicação</label>
+                  <input name="data_publicacao" value="<?php ?>" type="date" id="dataPublicacao" class="form-control" rows="10"></input>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="anexo">Anexo</label>
+                  <input name="anexo" value="<?php ?>" type="text" id="anexo" placeholder="Insira um link para anexar um arquivo, imagem, video, etc." class="form-control" rows="10"></input>
                 </div>
 
 

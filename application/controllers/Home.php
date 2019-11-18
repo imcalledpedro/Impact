@@ -25,15 +25,23 @@ class Home extends CI_Controller {
 		$this->load->view('d_adicionarproduto');
 	}
 
-	public function adicionarPublicacao(){
-		$this->load->view('d_adicionarpublicacao');
+	public function cadastrarProduto(){
+		$dados = array(
+			'nome' => $this->input->post("nome"),
+			'descricao' => $this->input->post("descricaoProduto"),
+			'categoria' => $this->input->post("categoria"),
+			'link_1' => $this->input->post("link1"),	
+			'link_2' => $this->input->post("link2"),
+			'link_3' => $this->input->post("link3"),
+			'link_4' => $this->input->post("link4"),
+			'link_Imagem' => $this->input->post("linkImagem"),			
+		);
+		$this->load->model('Produtos_model');
+		$this->Produtos_model->cadastrarProdutos($dados);
 	}
 
 	public function editarProduto(){
 		$this->load->view('d_editarproduto');
-	}
-	public function editarPublicacao(){
-		$this->load->view('d_editarpublicacao');
 	}
 
 	public function deletarProduto() {
@@ -41,6 +49,41 @@ class Home extends CI_Controller {
 		$this->db->where('id', $id);
 		$this->db->delete('produtos');
 		redirect('dashboard/produtos');
+	}
+
+	public function exibirProduto() {
+		$id = $this->input->get('id');
+		$this->load->model('Produtos_model');
+		$dados = array(
+			'titulo' => $this->Produtos_model->puxarNome($id),
+			'descricao' => $this->Produtos_model->puxarDescricao($id),
+			'categoria' => $this->Produtos_model->puxarCategoria($id),
+			'link1' => $this->Produtos_model->puxarLink1($id),
+			'link2' => $this->Produtos_model->puxarLink2($id),
+			'link3' => $this->Produtos_model->puxarLink3($id),
+			'link4' => $this->Produtos_model->puxarLink4($id),
+		);
+		$this->load->view('produto', $dados);
+	}
+
+	public function adicionarPublicacao(){
+		$this->load->view('d_adicionarpublicacao');
+	}
+
+	public function cadastrarPublicacao(){
+		$dados = array(
+			'titulo' => $this->input->post("titulo"),
+			'descricao' => $this->input->post("descricao"),
+			'texto_completo' => $this->input->post("texto_completo"),
+			'data_publicacao' => $this->input->post("data_publicacao"),	
+			'anexo' => $this->input->post("anexo"),
+		);
+		$this->load->model('Publicacoes_model');
+		$this->Publicacoes_model->cadastrarPublicacoes($dados);
+	}
+
+	public function editarPublicacao(){
+		$this->load->view('d_editarpublicacao');
 	}
 
 	public function deletarPublicacao() {
@@ -61,20 +104,4 @@ class Home extends CI_Controller {
 		);
 		$this->load->view('publicacao', $dados);
 	}
-
-	public function exibirProduto() {
-		$id = $this->input->get('id');
-		$this->load->model('Produtos_model');
-		$dados = array(
-			'titulo' => $this->Produtos_model->puxarNome($id),
-			'descricao' => $this->Produtos_model->puxarDescricao($id),
-			'categoria' => $this->Produtos_model->puxarCategoria($id),
-			'link1' => $this->Produtos_model->puxarLink1($id),
-			'link2' => $this->Produtos_model->puxarLink2($id),
-			'link3' => $this->Produtos_model->puxarLink3($id),
-			'link4' => $this->Produtos_model->puxarLink4($id),
-		);
-		$this->load->view('produto', $dados);
-	}
-
 }

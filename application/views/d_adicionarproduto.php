@@ -49,7 +49,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="<?php echo base_url();?>dashboard">
             <i class="fas fa-tachometer-alt"></i> Painel de Controle</a>
-          <a class="dropdown-item text-muted" href="encerrar">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
       </div> 
@@ -66,7 +66,7 @@
               </div>
 
               <div class="card-body">
-                 <form class="form-signin" method="post" action="">
+                 <form class="form-signin" method="post" action="<?php echo base_url() ?>dashboard/produtos/cadastrar">
 
                 <div class="form-label-group mb-4">
                   <label for="inputNome">Nome</label>
@@ -76,6 +76,11 @@
                 <div class="form-label-group mb-4">
                   <label for="inputDescricaoProduto">Descrição</label>
                   <textarea name="descricaoProduto" value="<?php ?>" type="textarea" id="inputDescricaoProduto" class="form-control" placeholder="Descrição" rows="3"></textarea>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="inputCategoria">Categoria</label>
+                  <input name="categoria" value="<?php ?>" type="text" id="inputCategoria" class="form-control" placeholder="Ex.: Higiene, Acessórios, Casa, Cozinha, etc.">
                 </div>
 
                 <div class="form-label-group mb-4">
@@ -100,7 +105,7 @@
 
                 <div class="form-label-group mb-4">
                     <label for="inputLinkImagem">Link da Imagem</label>
-                  <input name="linkimagem" value="<?php ?>" type="text" id="inputLinkImagem" class="form-control" placeholder="Link da Imagem">
+                  <input name="linkImagem" value="<?php ?>" type="text" id="inputLinkImagem" class="form-control" placeholder="Link da Imagem">
                 </div>
 
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>

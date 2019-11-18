@@ -11,17 +11,20 @@ $route['autenticar'] = 'Usuario/autenticar';
 
 $route['dashboard'] = 'Views/dashboard';
 
-$route['dashboard/produtos'] = 'Views/dprodutos';
-$route['dashboard/publicacoes'] = 'Views/dpublicacoes';
+$route['dashboard/produtos'] = 'Views/d_produtos';
+$route['dashboard/publicacoes'] = 'Views/d_publicacoes';
 $route['dashboard/perfil'] = 'Usuario/exibirDados';
 
 $route['dashboard/publicacoes/adicionar'] = 'Home/adicionarPublicacao';
 $route['dashboard/publicacoes/editar'] = 'Home/editarPublicacao';
 $route['dashboard/publicacoes/deletar'] = 'Home/deletarPublicacao';
+$route['dashboard/publicacoes/cadastrar'] = 'Home/cadastrarPublicacao';
+
 
 $route['dashboard/produtos/adicionar'] = 'Home/adicionarProduto';
 $route['dashboard/produtos/editar'] = 'Home/editarProduto';
 $route['dashboard/produtos/deletar'] = 'Home/deletarProduto';
+$route['dashboard/produtos/cadastrar'] = 'Home/cadastrarProduto';
 
 $route['dashboard/encerrar'] = 'Usuario/encerrar';
 
@@ -29,4 +32,3 @@ $route['index'] = 'Home/index';
 $route['produtos'] = 'Home/produtos';
 
 $route['publicacao'] = 'Home/exibirPublicacao';
-

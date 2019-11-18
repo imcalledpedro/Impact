@@ -17,6 +17,12 @@ class Publicacoes_model extends CI_Model {
 		return $contador;
 	}
 
+	public function cadastrarPublicacoes($dados=NULL) {
+		if ($dados!=NULL) {
+			$this->db->insert('publicacoes',$dados);
+		}redirect('dashboard/publicacoes');
+	}
+
 	public function puxarTitulo($id) {
 		$query = $this->db->query("SELECT titulo FROM publicacoes WHERE id = '".$id."'");
 		$row = $query->row();

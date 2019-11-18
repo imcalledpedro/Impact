@@ -49,7 +49,7 @@
           <!-- <div class="dropdown-divider"></div> -->
           <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/perfil">
             <i class="fas fa-user"></i> Perfil</a>
-          <a class="dropdown-item text-muted" href="encerrar">
+          <a class="dropdown-item text-muted" href="<?php echo base_url(); ?>dashboard/encerrar">
             <i class="fas fa-sign-out-alt"></i> Sair</a>
         </div>
       </div> 
@@ -84,7 +84,7 @@
                 <div class="row justify-content-center align-items-center">
                   <div class="col-md-6">
                     <div class="col-md-12 ">
-                      <h2 class="text-center text-white">Nós lutamos contra <br>o mundo plastificado.</h2>
+                      <h2 class="text-center text-white">E aí, <?php echo $this->session->userdata('nome'); ?>! Bem-vindo :D</h2>
                     </div>
                     <div class="col-md-6 mx-auto">
                       <img src="<?php echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
