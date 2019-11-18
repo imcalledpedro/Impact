@@ -17,6 +17,14 @@ class Usuario_model extends CI_Model {
 		
 	}
 
+	// public function editarUsuario($dados, $nameAnterior) {
+	// 	$this->db->where('na',$nameAnterior);
+	// 	$this->db->update('usuarios', $dados);
+	// 	// return $dados['name'];
+
+	// 	// redirect('dashboard/perfil');
+	// }
+
 	public function puxarNomeDoCara($email) {
 		$query = $this->db->query("SELECT name FROM usuarios WHERE email = '".$email."'");
 		$row = $query->row();

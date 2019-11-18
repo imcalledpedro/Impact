@@ -69,15 +69,15 @@
               </div>
 
               <div class="card-body">
-                 <form class="form-signin" method="post" action="autenticar">
+                 <form class="form-signin" method="post" action="<?php echo base_url(); ?>dashboard/perfil/editar">
 
                 <div class="form-label-group mb-4">
                   <label for="inputNome">Nome</label>
-                  <input name="nome" value="<?php echo $nome; ?>" type="text" id="inputNome" class="form-control" placeholder="Nome">
+                  <input name="name" value="<?php echo $nome; ?>" type="text" id="inputNome" class="form-control" placeholder="Nome">
                 </div>
 
                 <div class="form-label-group mb-4">
-                  <label for="inputEmail">Email</label>
+                  <label for="inputEmail">E-mail</label>
                   <input name="email" value="<?php echo $email; ?>" type="email" id="inputEmail" class="form-control" placeholder="Email">
                 </div>
 
@@ -86,12 +86,7 @@
                   <input name="password" value="<?php echo $senha; ?>" type="password" id="inputPassword" class="form-control" placeholder="Senha">
                   <input type="checkbox" onclick="mostrar_senha()"> Mostrar senha
                 </div>
-
-                <div class="form-label-group mb-5">
-                    <label for="inputPassword">Confirmar Senha</label>
-                  <input name="confirm_password" type="password" id="confirmPassword" class="form-control" placeholder="Senha">
-                </div>
-
+                
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>
 
               </form>
