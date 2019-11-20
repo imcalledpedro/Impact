@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 18-Nov-2019 às 05:10
+-- Generation Time: 20-Nov-2019 às 05:17
 -- Versão do servidor: 10.1.38-MariaDB
 -- versão do PHP: 7.3.2
 
@@ -43,13 +43,6 @@ CREATE TABLE `produtos` (
   `link_imagem` varchar(800) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Extraindo dados da tabela `produtos`
---
-
-INSERT INTO `produtos` (`id`, `nome`, `descricao`, `categoria`, `link_1`, `link_2`, `link_3`, `link_4`, `link_imagem`) VALUES
-(1, 'Escova de dentes de bambu', 'Feita de bambu e cerdas de carvão', 'Higiene', 'link', 'link', 'link', 'link', 'https://lojapensandoaocontrario.com.br/wp-content/uploads/2018/01/escova_ecologica_bambu_embalagem_eco2.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -66,13 +59,6 @@ CREATE TABLE `publicacoes` (
   `anexo` varchar(200) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
---
--- Extraindo dados da tabela `publicacoes`
---
-
-INSERT INTO `publicacoes` (`id`, `titulo`, `descricao`, `texto_completo`, `data_publicacao`, `anexo`) VALUES
-(4, 'Canudos descartáveis e as soluções possíveis', 'Empresários se juntam à luta contra os plásticos descartáveis e lançam modelos de canudo biodegradável, compostável e até comestível', 'Os canudos de plástico se tornaram um grande problema ecológico. Eles já representam 4% de todo o lixo plástico produzido no mundo e, como são feitos dos plásticos polipropileno e poliestireno, não são biodegradáveis e sua reciclagem é difícil. Eles podem levar até mil anos para se decompor no meio ambiente. Mas será que são mesmo necessários? O mercado tem se ajustado à luta contra os descartáveis e começam a surgir alternativas. O canudo de papel é cada vez mais comum e já existem também modelos de canudinho biodegradável e até comestível.\r\n<br><br>\r\nO canudo de plástico é um item a ser evitado. Mesmo quando descartado corretamente, ele pode escapar para a natureza e ser carregado pela chuva para mares e rios, impactando toda a fauna aquática. Estima-se que 90% das espécies marinhas tenham ingerido produtos de plástico em algum momento. Além disso, nas praias e mares, esses canudos são também fonte de formação de microplástico, o pior formato possível para o plástico e que já está presente nos alimentos, no sal, na água potável e até em garrafas de água mineral! Saiba mais sobre os impactos e alternativas ao consumo do canudo de plástico.\r\n<br><br>\r\nPreocupados com o meio ambiente e com os impactos do lixo plástico, alguns empresários já lançaram alternativas ao canudo de plástico. O canudo de papel é cada vez mais presente, já que é uma opção biodegradável, mas ele também acaba sendo fonte de poluição até sua completa biodegradação, já que o modelo foi pensado como um descartável. Opções melhores são os canudos comestíveis e os modelos de canudo compostável.', '2019-09-02 22:56:00', '');
-
 -- --------------------------------------------------------
 
 --
@@ -86,17 +72,6 @@ CREATE TABLE `usuarios` (
   `email` varchar(40) COLLATE utf8_bin NOT NULL,
   `password` varchar(20) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Extraindo dados da tabela `usuarios`
---
-
-INSERT INTO `usuarios` (`id`, `name`, `email`, `password`) VALUES
-(2, 'Walber', 'walber@impact.com', 'walber'),
-(3, 'Ruth', 'ruth@impact.com', 'ruth'),
-(4, 'Yasmim', 'yasmim@impact.com', 'yasmim'),
-(5, 'Samuel', 'samuel@impact.com', 'samuel'),
-(6, 'Pedro', 'pedro@impact.com', 'pedro');
 
 --
 -- Indexes for dumped tables
@@ -134,7 +109,7 @@ ALTER TABLE `produtos`
 -- AUTO_INCREMENT for table `publicacoes`
 --
 ALTER TABLE `publicacoes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `usuarios`
