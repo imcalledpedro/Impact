@@ -65,21 +65,36 @@
               </div>
 
               <div class="card-body">
-                 <form class="form-signin" method="post" action="">
+                 <form class="form-signin" method="post" action="<?php echo base_url() ?>dashboard/publicacoes/editar/dados">
 
                 <div class="form-label-group mb-4">
                   <label for="inputTitulo">Título</label>
-                  <input name="titulo" value="<?php  ?>" type="text" id="inputTitulo" class="form-control" placeholder="Titulo">
+                  <input name="titulo" value="<?php  echo $titulo; ?>" type="text" id="inputTitulo" class="form-control" placeholder="Titulo">
                 </div>
 
                 <div class="form-label-group mb-4">
                   <label for="inputDescricao">Descrição</label>
-                  <textarea name="descricao" value="<?php ?>" type="textarea" id="inputDescricao" class="form-control" placeholder="Descrição" rows="3"></textarea>
+                  <textarea name="descricao" type="textarea" id="inputDescricao" class="form-control" placeholder="Descrição" rows="3"><?php echo $descricao; ?></textarea>
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputTexto">Texto</label>
-                  <textarea name="texto_completo" value="<?php ?>" type="text" id="inputTexto" class="form-control" placeholder="Texto" rows="10"></textarea>
+                  <textarea name="texto_completo" type="text" id="inputTexto" class="form-control" placeholder="Texto" rows="10"><?php echo $texto_completo; ?></textarea>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="inputDate">Data</label>
+                  <input name="data_publicacao" value="<?php echo $data_publicacao; ?>" type="text" id="inputDate" class="form-control"></input>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="inputAnexo">Anexo</label>
+                  <input name="anexo" value="<?php echo $anexo; ?>" type="text" id="inputAnexo" class="form-control"></input>
+                </div>
+
+                <div class="form-label-group mb-4">
+                  <label for="inputId">ID</label>
+                  <input name="id" value="<?php echo $id;?>" type="text" id="inputId" class="form-control" placeholder="ID" readonly>
                 </div>
 
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>

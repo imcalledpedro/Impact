@@ -18,13 +18,15 @@ $route['dashboard/perfil'] = 'Usuario/exibirDados';
 $route['dashboard/perfil/editar'] = 'Usuario/editarDados';
 
 $route['dashboard/publicacoes/adicionar'] = 'Home/adicionarPublicacao';
-$route['dashboard/publicacoes/editar'] = 'Home/editarPublicacao';
+$route['dashboard/publicacoes/editar'] = 'Home/exibirPublicacaoEditar';
+$route['dashboard/publicacoes/editar/dados'] = 'Home/editarPublicacao';
 $route['dashboard/publicacoes/deletar'] = 'Home/deletarPublicacao';
 $route['dashboard/publicacoes/cadastrar'] = 'Home/cadastrarPublicacao';
 
 
 $route['dashboard/produtos/adicionar'] = 'Home/adicionarProduto';
-$route['dashboard/produtos/editar'] = 'Home/editarProduto';
+$route['dashboard/produtos/editar'] = 'Home/exibirProdutosEditar';
+$route['dashboard/produtos/editar/dados'] = 'Home/editarProduto';
 $route['dashboard/produtos/deletar'] = 'Home/deletarProduto';
 $route['dashboard/produtos/cadastrar'] = 'Home/cadastrarProduto';
 

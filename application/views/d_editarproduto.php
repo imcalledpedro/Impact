@@ -65,41 +65,51 @@
               </div>
 
               <div class="card-body">
-                 <form class="form-signin" method="post" action="">
+                 <form class="form-signin" method="post" action="<?php echo base_url() ?>dashboard/produtos/editar/dados">
 
                 <div class="form-label-group mb-4">
                   <label for="inputNome">Nome</label>
-                  <input name="nome" value="<?php  ?>" type="text" id="inputNome" class="form-control" placeholder="Nome">
+                  <input name="nome" value="<?php echo $nome;?>" type="text" id="inputNome" class="form-control" placeholder="Nome">
                 </div>
 
                 <div class="form-label-group mb-4">
                   <label for="inputDescricaoProduto">Descrição</label>
-                  <textarea name="descricaoProduto" value="<?php ?>" type="textarea" id="inputDescricaoProduto" class="form-control" placeholder="Descrição" rows="3"></textarea>
+                  <textarea name="descricao" type="textarea" id="inputDescricaoProduto" class="form-control" placeholder="Descrição" rows="3"><?php echo $descricao;?></textarea>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="inputCategoria">Categoria</label>
+                  <input name="categoria" value="<?php echo $categoria;?>" type="text" id="inputCategoria" class="form-control" placeholder="Categoria">
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputLink1">Link 1</label>
-                  <input name="link1" value="<?php ?>" type="text" id="inputLink1" class="form-control" placeholder="Link 1">
+                  <input name="link1" value="<?php echo $link_1;?>" type="text" id="inputLink1" class="form-control" placeholder="Link 1">
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputLink2">Link 2</label>
-                  <input name="link2" value="<?php ?>" type="text" id="inputLink2" class="form-control" placeholder="Link 2">
+                  <input name="link2" value="<?php echo $link_2;?>" type="text" id="inputLink2" class="form-control" placeholder="Link 2">
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputLink3">Link 3</label>
-                  <input name="link3" value="<?php ?>" type="text" id="inputLink3" class="form-control" placeholder="Link 3">
+                  <input name="link3" value="<?php echo $link_3;?>" type="text" id="inputLink3" class="form-control" placeholder="Link 3">
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputLink4">Link 4</label>
-                  <input name="link4" value="<?php ?>" type="text" id="inputLink4" class="form-control" placeholder="Link 4">
+                  <input name="link4" value="<?php echo $link_4;?>" type="text" id="inputLink4" class="form-control" placeholder="Link 4">
                 </div>
 
                 <div class="form-label-group mb-4">
                     <label for="inputLinkImagem">Link da Imagem</label>
-                  <input name="linkimagem" value="<?php ?>" type="text" id="inputLinkImagem" class="form-control" placeholder="Link da Imagem">
+                  <input name="linkImagem" value="<?php echo $link_imagem;?>" type="text" id="inputLinkImagem" class="form-control" placeholder="Link da Imagem">
+                </div>
+
+                <div class="form-label-group mb-4">
+                  <label for="inputId">ID</label>
+                  <input name="id" value="<?php echo $id;?>" type="text" id="inputId" class="form-control" placeholder="ID" readonly>
                 </div>
 
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>

@@ -43,4 +43,10 @@ class Publicacoes_model extends CI_Model {
 		$row = $query->row();
 		return $row->data_publicacao;
 	}
+
+	public function puxarAnexo($id) {
+		$query = $this->db->query("SELECT anexo FROM publicacoes WHERE id = '".$id."'");
+		$row = $query->row();
+		return $row->anexo;
+	}
 }
