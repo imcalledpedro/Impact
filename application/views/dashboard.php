@@ -24,6 +24,8 @@
       .btn-info{background-color: #5092c2 !important;}
       .border-info{border-color: #5092c2 !important;}
       .text-info{color: #5092c2 !important;}
+      .btn-outline-info{border-color: #5092c2 !important;}
+      .btn-outline-info:hover{background-color: #5092c2 !important;}
       body{
         font-family: 'Lexend Deca', sans-serif;
       }

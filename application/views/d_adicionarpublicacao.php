@@ -25,6 +25,8 @@
       .btn-info{background-color: #5092c2 !important;}
       .border-info{border-color: #5092c2 !important;}
       .text-info{color: #5092c2 !important;}
+      .btn-outline-info{border-color: #5092c2 !important;}
+      .btn-outline-info:hover{background-color: #5092c2 !important;}
       body{
         font-family: 'Lexend Deca', sans-serif;
       }
@@ -40,7 +42,7 @@
 
       <a id="navbar-brand" class="navbar-brand" href="<?php echo base_url(); ?>dashboard"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
-        <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-outline-info" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="mr-2 d-none d-lg-inline text-gray-600 small">
               <?php echo $this->session->userdata('nome'); ?>
             </span>

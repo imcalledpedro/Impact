@@ -24,6 +24,8 @@
       .bg-info{background-color: #5092c2 !important;}
       .badge-info{background-color: #5092c2 !important;}
       .btn-info{background-color: #5092c2 !important;}
+      .btn-outline-info{border-color: #5092c2 !important;}
+      .btn-outline-info:hover{background-color: #5092c2 !important;}
       .border-info{border-color: #5092c2 !important;}
       .text-info{color: #5092c2 !important;}
       body{
@@ -41,7 +43,7 @@
 
       <a id="navbar-brand" class="navbar-brand" href="#"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
-        <a class="btn btn-outline-info border-radius" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="btn btn-outline-info" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata('nome'); ?></span>
             <i class="fas fa-user"></i>
         </a>
@@ -75,7 +77,7 @@
     <div class="container-fluid p-0 pt-1">
       <!-- Card Tabela -->
           <div class="col-12">
-            <div class="card shadow m-3 border-right-0 border-top-0 border-bottom-0 border-info">
+            <div class="card shadow m-3 border-right-0 border-top-0 border-info">
               <!-- nome -->
               <div class="card-header bg-transparent border-0 mx-3">
                 <div class="row">
@@ -89,14 +91,14 @@
               <!-- tabela -->
               <div class="card-body">
                 <div class="table-responsive">
-                  <table class="table table-hover text-center table-bordered">
+                  <table class="table table-hover table-hover text-center table-bordered">
                     <thead>
                       <tr>
                         <th scope="col">Título</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Data</th>
                         <th scope="col">Anexo</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col" style="width: 10%">Ações</th>
                       </tr>
                     </thead>
                     <tbody class="roboto">
@@ -106,13 +108,13 @@
                         foreach ($publicacoes as $publicacao) { ?>
                           <tr>
                             <td><?= $publicacao->titulo; ?></td>
-                            <td><?php echo $publicacao->descricao; ?></td>
+                            <td><?php echo character_limiter($publicacao->descricao, 20); ?></td>
                             <td><?php echo $publicacao->data_publicacao; ?></td>
                             <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
                             <td>
-                              <a class="text-info" href="<?php echo base_url() ?>dashboard/publicacoes/editar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
+                              <a class="text-info mx-1" href="<?php echo base_url() ?>dashboard/publicacoes/editar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
 
-                              <a class="text-info" href="<?php echo base_url() ?>dashboard/publicacoes/deletar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
+                              <a class="text-info mx-1" href="<?php echo base_url() ?>dashboard/publicacoes/deletar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-trash text-danger"></i></a>
                               
                               <!-- Button trigger modal -->
                               <!-- <a class="text-danger" data-toggle="modal" data-target="#exampleModal">
