@@ -1,7 +1,12 @@
 # impact.github.io
 Projeto Impact - IFRN
 
+1.0.5
+
+- Adição de modal de confirmação ao excluir publicações, postagens e perfil de usuário
+
 1.0.4
+
 - Correção de bugs na interface
 - Correção do card contato
 - Adição de imagem principal às publicações

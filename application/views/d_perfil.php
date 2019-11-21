@@ -89,7 +89,29 @@
                   <input type="checkbox" onclick="mostrar_senha()"> Mostrar senha
                 </div>
 
-                <a href="<?php echo base_url() ?>dashboard/perfil/deletar" class="m-1">Deletar meu perfil permanentemente</a>
+                <!-- Button trigger modal -->
+                <a class="text-danger" href="" data-toggle="modal" data-target="#exampleModal">
+                  Excluir meu perfil
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header border-0">
+                        <p>Deseja excluir permanentemente o seu perfil?</p>
+                        <!-- <h5 class="modal-title" id="exampleModalLabel">Excluir</h5> -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-footer border-0">
+                        <a class="btn btn-sm btn-secondary text-white" data-dismiss="modal">Cancelar</a>
+                        <a href="<?php echo base_url() ?>dashboard/perfil/deletar" class="m-1 btn btn-danger btn-sm">Sim, Deletar meu perfil</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <button class="btn btn-lg btn-info btn-block text-uppercase mt-2" type="submit">Salvar</button>
 

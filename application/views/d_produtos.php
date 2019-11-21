@@ -103,7 +103,7 @@
                         <th scope="col">Nome</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Categoria</th>
-                        <th scope="col" style="width: 10%">Ações</th>
+                        <th scope="col" style="width: 20%">Ações</th>
                       </tr>
                     </thead>
                     <tbody class="roboto">
@@ -117,7 +117,47 @@
                             <td><?php echo $produto->categoria; ?></td>
                             <td>
                               <a class="text-info mx-1" href="<?php echo base_url() ?>dashboard/produtos/editar/?id=<?php echo $produto->id; ?>"><i class="fas fa-pen text-warning"></i></a>
-                              <a class="text-info mx-1" href="<?php echo base_url() ?>dashboard/produtos/deletar/?id=<?php echo $produto->id; ?>"><i class="fas fa-trash text-danger"></i></a>
+                              <!-- <a class="text-info mx-1" href="<?php //echo base_url() ?>dashboard/produtos/deletar/?id=<?php //echo $produto->id; ?>"><i class="fas fa-trash text-danger"></i></a> -->
+
+              
+                              <!-- Button trigger modal -->
+                              <a data-toggle="modal" data-target="#exampleModal<?php echo $produto->id; ?>">
+                                <i class="fas fa-trash text-danger"></i>
+                              </a>
+
+                              <!-- Modal -->
+                              <div class="modal fade" id="exampleModal<?php echo $produto->id; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header border-0">
+                                      <!-- <h5 class="modal-title" id="exampleModalLabel">Excluir</h5> -->
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Deseja excluir permanentemente "<?php echo $produto->nome; ?>"?</p>
+                                      
+                                    </div>
+                                    <div class="modal-footer border-0">
+                                      <a class="btn btn-sm btn-secondary text-white" data-dismiss="modal">Cancelar</a>
+                                      <a class="btn btn-sm btn-danger mx-1" href="<?php echo base_url() ?>dashboard/produtos/deletar/?id=<?php echo $produto->id; ?>">
+                                        Excluir
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+
+
+
+
+
+
+
+
+
                             </td>
                           </tr>
                       <?php $contador++;
