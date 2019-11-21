@@ -69,9 +69,9 @@
   	      <li class="nav-item">
   	        <a class="nav-link" href="produtos">Produtos</a>
   	      </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" href="#contato">Contato</a>
-          </li>
+          </li> -->
   	    </ul>
   	  </div>
     </nav>
@@ -124,7 +124,7 @@
       </div>
     </section>
 
-    <section class="mt-5">
+    <!-- <section class="mt-5">
       <h1 class="text-center mt-5 mb-5">Contato</h1>
       <div class="col-5 mt-5 mx-auto"><hr></div>
       <div class="container mt-5">
@@ -134,19 +134,19 @@
                 <form>
                   <div class="row">
                     <div class="col mb-3">
-                      <input type="text" class="form-control" placeholder="Nome">
+                      <input name="nome" type="text" class="form-control" placeholder="Nome">
                     </div>
                     <div class="col mb-3">
-                      <input type="text" class="form-control" placeholder="Sobrenome">
+                      <input name="email" type="text" class="form-control" placeholder="E-mail">
                     </div>
                     <div class="col-md-12 mb-3">
-                      <input type="text" class="form-control" placeholder="Assunto">
+                      <input name="" type="text" class="form-control" placeholder="Assunto">
                     </div>
                     <div class="col-md-12 mb-3">
-                      <textarea class="form-control" placeholder="Mensagem" rows="5"></textarea>
+                      <textarea name="mensagem" class="form-control" placeholder="Mensagem" rows="5"></textarea>
                     </div>
                     <div class="col-md-12 mb-3">
-                      <button type="submit" class="btn btn-info shadow-lg">Enviar</button>
+                      <a href="mailto:imcalledpedro@gmail.com?Subject=Hello%20again" class="btn btn-info shadow-lg">Enviar</a>
                     </div>
                   </div>
                 </form>
@@ -154,13 +154,29 @@
             </div>
           </div>
       </div>
-    </section>
 
-    <footer class="footer mt-auto py-3 bg-info">
-      <div class="container text-center">
-        <span class="text-white">Projeto Impact - IFRN - <i>Campus</i> Natal - Zona Norte</span><br>
-        <span class="text-white">Informática para Internet - 3.4111.1v</span><br>
-        <span class="text-white">FANT4STIC FOUR</span>
+    </section> -->
+
+    <footer class="footer mt-auto py-5 bg-info">
+      <div class="container">
+        <div class="row col-8  mx-auto">
+          <div class="col-md-6 text-left">
+            <a class="text-white d-block" href="mailto:imcalledpedro@gmail.com">Enviar email para contato</a>
+            <a class="text-white d-block" href="">Trabalhe conocso</a>
+            <a class="text-white d-block" href="">Seja um apoiador</a>
+            <a class="text-white d-block" href="">Sobre o projeto</a>
+            
+          </div>
+          <div class="col-md-6">
+            <span class="text-white">Projeto Impact - IFRN - <i>Campus</i> Natal - Zona Norte</span><br>
+            <span class="text-white">Informática para Internet - 3.4111.1v</span><br>
+            <span class="text-white">FANT4STIC FOUR</span>
+          </div>
+        </div>
+        <div class="col-12 mt-5 mx-auto"><hr></div>
+        <div class="container text-center">
+          <img id="logo" src="<?php echo base_url();?>/assets/img/logo-white.png" height="40">
+        </div>
       </div>
     </footer>
 

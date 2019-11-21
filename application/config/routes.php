@@ -15,8 +15,7 @@ $route['dashboard/produtos'] = 'Views/d_produtos';
 $route['dashboard/publicacoes'] = 'Views/d_publicacoes';
 
 $route['dashboard/perfil'] = 'Usuario/exibirDados';
-$route['dash
-board/perfil/editar'] = 'Usuario/editarDados';
+$route['dashboard/perfil/editar'] = 'Usuario/editarDados';
 $route['dashboard/perfil/deletar'] = 'Usuario/deletarUsuario';
 
 $route['dashboard/publicacoes/adicionar'] = 'Home/adicionarPublicacao';
