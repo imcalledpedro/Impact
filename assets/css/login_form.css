@@ -34,9 +34,9 @@
         width: 100%;
       }
 
-      .form-signin .btn {
+      .form-signin .btn{
         font-size: 80%;
-        border-radius: 5rem;
+        //border-radius: 5rem;
         letter-spacing: .1rem;
         font-weight: bold;
         padding: 1rem;

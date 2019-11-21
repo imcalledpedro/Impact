@@ -57,7 +57,7 @@
                   <input type="checkbox" class="custom-control-input" id="customCheck1">
                   <label class="custom-control-label" for="customCheck1">Lembrar minha senha</label>
                 </div>
-                <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Entrar</button>
+                <button class="btn btn-info btn-block text-uppercase" type="submit">Entrar</button>
 
                 <a class="d-block text-info text-center mt-2 small" href="register">Não possui uma conta? Cadastre-se</a>
               </form>
