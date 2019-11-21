@@ -81,17 +81,14 @@
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="<?php echo base_url();?>/assets/img/bird.png" class="d-block w-100" alt="...">
+            <img src="<?php echo base_url();?>assets/img/escova.png" class="d-block w-100" alt="...">
           </div>
           <div class="carousel-item">
-            <img src="<?php echo base_url();?>/assets/img/bird.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="<?php echo base_url();?>/assets/img/bird.png" class="d-block w-100" alt="...">
+            <img src="<?php echo base_url();?>assets/img/canudo.png" class="d-block w-100" alt="...">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -134,8 +131,7 @@
                         <img src="<?php echo $produto->link_imagem; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title"><?php echo $produto->nome; ?></h5>
-                          <p class="card-text"><?php echo $produto->descricao; ?></p>
-                          <a href="#" class="btn btn-primary">Ver produto</a>
+                          <a href="<?php echo base_url(); ?>produto/?id=<?php echo $produto->id; ?>" class="btn btn-primary">Ver produto</a>
                         </div>
                       </div>
                 <?php $contador++;}?>

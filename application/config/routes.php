@@ -36,3 +36,4 @@ $route['index'] = 'Home/index';
 $route['produtos'] = 'Home/produtos';
 
 $route['publicacao'] = 'Home/exibirPublicacao';
+$route['produto'] = 'Home/exibirProduto';

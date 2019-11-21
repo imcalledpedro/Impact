@@ -11,7 +11,7 @@ class Views extends CI_Controller {
 			$data2['produtos'] = $this->produtos->countProdutos();
 			$this->load->view('dashboard', $data1, $data2);
 		}else {
-			#code...
+			$this->load->view('login');
 		}
 	}
 

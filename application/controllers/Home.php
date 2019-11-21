@@ -114,6 +114,7 @@ class Home extends CI_Controller {
 		$id = $this->input->get('id');
 		$this->load->model('Produtos_model');
 		$dados = array(
+			'id' => $this->input->get('id'),
 			'nome' => $this->Produtos_model->puxarNome($id),
 			'descricao' => $this->Produtos_model->puxarDescricao($id),
 			'categoria' => $this->Produtos_model->puxarCategoria($id),
@@ -121,6 +122,7 @@ class Home extends CI_Controller {
 			'link2' => $this->Produtos_model->puxarLink2($id),
 			'link3' => $this->Produtos_model->puxarLink3($id),
 			'link4' => $this->Produtos_model->puxarLink4($id),
+			'link_imagem' => $this->Produtos_model->puxarImagem($id)
 		);
 		$this->load->view('produto', $dados);
 	}

@@ -83,7 +83,7 @@
                   <a href="<?php echo base_url(); ?>dashboard/publicacoes/adicionar" class="btn btn-info ml-auto"><small><i class="fas fa-plus"></i> Adicionar</small></a>
                 </div>
                 <div class="row">
-                  <a href="<?php echo base_url(); ?>#publicacoes" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+                  <a href="<?php echo base_url(); ?>#publicacoes"  target="_blank" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
                 </div>
               </div>
               <!-- tabela -->

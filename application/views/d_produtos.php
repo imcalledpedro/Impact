@@ -87,7 +87,7 @@
                 <div class="row">
 
                   <!-- CORRIGIR HREF -->
-                  <a href="produtos" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
+                  <a href="<?php echo base_url() ?>produtos" target="_blank" class=" mx-1"><small><i class="fas fa-eye"></i> Visualizar como cliente</small></a>
                   <!-- CORRIGIR -->
 
                 </div>
