@@ -58,33 +58,8 @@ class Home extends CI_Controller {
 		$this->db->where('id',$id);
 		$this->db->update('produtos', $dados);
 
-		$this->load->view('d_editarproduto', $dados);
+		redirect('dashboard/produtos');
 	}
-
-	// public function editarDados(){
-	// 	$dados = array(
-	// 		'name' => $this->input->post("name"),
-	// 		'email' => $this->input->post("email"),
-	// 		'password' => $this->input->post("password")	
-	// 	);
-
-	// 	$email = $this->input->post('email');
-	// 	$name = $this->input->post('name');
-	// 	$password = $this->input->post('password');
-
-	// 	$nameAnterior = $this->session->userdata('nome');
-
-	// 	// $this->load->model('Usuario_model');
-	// 	// $this->Usuario_model->editarUsuario($dados, $nameAnterior);
-
-	// 	$this->db->where('name',$nameAnterior);
-	// 	$this->db->update('usuarios', $dados);
-			
-	// 	$this->session->set_userdata('nome',$name);
-	// 	$this->session->set_userdata('email',$email);
-
-	// 	redirect('dashboard/perfil');
-	// }
 
 	public function deletarProduto() {
 		$id = $this->input->get('id');
@@ -176,6 +151,7 @@ class Home extends CI_Controller {
 			'texto_completo' => $this->input->post("texto_completo"),
 			'data_publicacao' => $this->input->post("data_publicacao"),	
 			'anexo' => $this->input->post("anexo"),
+			'link_imagem' => $this->input->post('link_imagem'),
 		);
 
 		$id = $this->input->post('id');
@@ -183,7 +159,8 @@ class Home extends CI_Controller {
 		$this->db->where('id',$id);
 		$this->db->update('publicacoes', $dados);
 
-		$this->load->view('d_editarpublicacao', $dados);
+		// $this->load->view('d_editarpublicacao', $dados);
+		redirect('dashboard/publicacoes');
 	}
 
 	public function deletarPublicacao() {
@@ -203,6 +180,7 @@ class Home extends CI_Controller {
 			'texto_completo' => $this->Publicacoes_model->puxarTexto($id),
 			'data_publicacao' => $this->Publicacoes_model->puxarData($id),
 			'anexo' => $this->Publicacoes_model->puxarAnexo($id),
+			'link_imagem' => $this->Publicacoes_model->puxarImagem($id),
 		);
 		$this->load->view('d_editarpublicacao', $dados);
 	}
@@ -216,6 +194,7 @@ class Home extends CI_Controller {
 			'descricao' => $this->Publicacoes_model->puxarDescricao($id),
 			'texto' => $this->Publicacoes_model->puxarTexto($id),
 			'data' => $this->Publicacoes_model->puxarData($id),
+			'imagem' => $this->Publicacoes_model->puxarImagem($id),
 		);
 		$this->load->view('publicacao', $dados);
 	}

@@ -129,7 +129,7 @@
       <div class="col-5 mt-5 mx-auto"><hr></div>
       <div class="container mt-5">
           <div class="row">
-            <div class="card mx-auto mb-5 shadow border-right-0 border-bottom-0 border-top-0 border-info">
+            <div class="card col-10 mx-auto mb-5 shadow border-right-0 border-bottom-0 border-top-0 border-info">
               <div class="card-body">
                 <form>
                   <div class="row">
@@ -175,7 +175,7 @@
 
         const nightModeStorage = localStorage.getItem('NightMode')
 
-        // caso tenha o valor no localStorage
+        // caso tenha o valor no localStorage 
         if (nightModeStorage) {
           $('.navbar').toggleClass('bg-light navbar-light');
           $('.navbar').toggleClass('bg-dark navbar-dark');

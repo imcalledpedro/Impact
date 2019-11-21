@@ -7,7 +7,7 @@ class Publicacoes_model extends CI_Model {
 		$query = $this->db->get('publicacoes');
 		return $query->result();
 	}
-
+	
 	public function countPublicacoes() {
 		$query = $this->db->get('publicacoes');
 		$contador = 0;
@@ -48,5 +48,11 @@ class Publicacoes_model extends CI_Model {
 		$query = $this->db->query("SELECT anexo FROM publicacoes WHERE id = '".$id."'");
 		$row = $query->row();
 		return $row->anexo;
+	}
+
+	public function puxarImagem($id) {
+		$query = $this->db->query("SELECT link_imagem FROM publicacoes WHERE id = '".$id."'");
+		$row = $query->row();
+		return $row->link_imagem;
 	}
 }

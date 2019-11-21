@@ -11,7 +11,7 @@
     <!-- Google Fonts Link -->
     <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom CSS -->
@@ -35,6 +35,10 @@
         right: 25px;
         z-index: 1060;
         border-radius:30px;
+      }
+      .banner-imagem {
+        height: 400px;
+
       }
     </style>
 
@@ -76,22 +80,18 @@
       </div>
     </nav>
 
-    <section id="Home">
+    <!-- <section id="Home">
         <div class="container-fluid mt-4">
-            <div class="carousel bg-info shadow-lg rounded-lg p-5">
+            <div class="carousel bg-info shadow-lg rounded-lg">
                 <div class="row align-items-center">
-                    <div class="col-md-6">
-
-                        <h2 class="text-center text-white">Nós lutamos contra <br>o mundo plastificado.</h2>
-                    </div>
-                    <div class="col-md-6">
-                        <img src="<?php echo base_url();?>/assets/img/home-impact.png" class="img-fluid">
+                    <div class="col-md-12 h-25">
+                        <img src="" class="img-fluid rounded-lg">
                     </div>
                 </div>
                 <span id="publicacoes"></span>
             </div>
         </div>
-    </section>
+    </section> -->
     
     <section class="mt-5">
 
@@ -115,7 +115,8 @@
                         <div class="col-md-10 mx-auto">
                           <div class=" mb-3">
                             <div class="card-body">
-
+                              <img class="card-img-top" src="<?php echo $imagem;?>">
+                              <div class="m-5"></div>
                               <p class="card-text"><?php echo $texto;?></p>
                             </div>
                           </div>

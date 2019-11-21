@@ -44,6 +44,13 @@ class Usuario extends CI_Controller {
 		$this->Usuario_model->cadastrarUsuario($dados);
 	}
 
+	public function deletarUsuario() {
+		$email = $this->session->userdata('email');
+		$this->db->where('email', $email);
+		$this->db->delete('usuarios');
+		redirect('login');
+	}
+
 	public function exibirDados() {
 		$email = $this->session->userdata('email');
 		$this->load->model('Usuario_model');
@@ -66,9 +73,6 @@ class Usuario extends CI_Controller {
 
 		$nameAnterior = $this->session->userdata('nome');
 
-		// $this->load->model('Usuario_model');
-		// $this->Usuario_model->editarUsuario($dados, $nameAnterior);
-
 		$this->db->where('name',$nameAnterior);
 		$this->db->update('usuarios', $dados);
 			
@@ -77,14 +81,4 @@ class Usuario extends CI_Controller {
 
 		redirect('dashboard/perfil');
 	}
-
-	// public function editarDados() {
-	// 	// $dados = array(
-	// 	// 	'name' => $this->input->post("name"),
-	// 	// 	'email' => $this->input->post("email"),
-	// 	// 	'password' => $this->input->post("password")	
-	// 	// );
-
-		
-	// }
 }

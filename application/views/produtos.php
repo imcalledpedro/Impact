@@ -11,7 +11,7 @@
     <!-- Google Fonts Link -->
 	  <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom CSS -->
@@ -127,11 +127,11 @@
 
                 <?php $contador = 0;
                     foreach ($produtos as $produto) { ?>
-                      <div class="card mx-1 shadow p-2" style="width: 18rem;">
+                      <div class="card m-1 shadow p-2" style="width: 17rem;">
                         <img src="<?php echo $produto->link_imagem; ?>" class="card-img-top" alt="...">
                         <div class="card-body">
                           <h5 class="card-title"><?php echo $produto->nome; ?></h5>
-                          <a href="<?php echo base_url(); ?>produto/?id=<?php echo $produto->id; ?>" class="btn btn-primary">Ver produto</a>
+                          <a href="<?php echo base_url(); ?>produto/?id=<?php echo $produto->id; ?>" class="btn btn-info">Ver produto</a>
                         </div>
                       </div>
                 <?php $contador++;}?>

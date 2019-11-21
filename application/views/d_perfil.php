@@ -88,8 +88,10 @@
                   <input name="password" value="<?php echo $senha; ?>" type="password" id="inputPassword" class="form-control" placeholder="Senha">
                   <input type="checkbox" onclick="mostrar_senha()"> Mostrar senha
                 </div>
-                
-                <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>
+
+                <a href="<?php echo base_url() ?>dashboard/perfil/deletar" class="m-1">Deletar meu perfil permanentemente</a>
+
+                <button class="btn btn-lg btn-info btn-block text-uppercase mt-2" type="submit">Salvar</button>
 
               </form>
               </div>           

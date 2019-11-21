@@ -43,10 +43,12 @@
       <a id="navbar-brand" class="navbar-brand" href="<?php echo base_url(); ?>dashboard"><img id="logo" src="<?php echo base_url();?>/assets/img/logo.png" height="30"></a>
       <div id="profile" class="dropleft ml-auto">
         <a class="btn btn-outline-info" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
             <span class="mr-2 d-none d-lg-inline text-gray-600 small">
               <?php echo $this->session->userdata('nome'); ?>
             </span>
             <i class="fas fa-user"></i>
+            
         </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
           <a class="dropdown-item text-muted" href="<?php echo base_url();?>dashboard">
@@ -92,6 +94,11 @@
                 <div class="form-label-group mb-4">
                     <label for="inputAnexo">Anexo</label>
                   <input name="anexo" value="<?php echo $anexo; ?>" type="text" id="inputAnexo" class="form-control"></input>
+                </div>
+
+                <div class="form-label-group mb-4">
+                    <label for="inputImagem">Link da imagem</label>
+                  <input name="link_imagem" value="<?php echo $link_imagem; ?>" type="text" id="inputImagem" class="form-control"></input>
                 </div>
 
                 <div class="form-label-group mb-4">
