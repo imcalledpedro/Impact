@@ -109,7 +109,7 @@
                             <h5 class="card-title"><?php echo $publicacao->titulo ?></h5>
                             <p class="card-text"><small><?php echo $publicacao->descricao ?></small></p>
                             <a href="publicacao/?id=<?php echo $publicacao->id;?>" class="btn btn-info shadow">Continuar lendo</a>
-                            <p class="card-text text-right"><small class="text-muted"><?php 
+                            <p class="card-text text-right text-muted"><small id="data_text" class=""><?php 
                               $sampleDate = $publicacao->data_publicacao;
                               $convertDate = date("d/m/Y", strtotime($sampleDate));                                  
                               echo "Data de publicação: ",$convertDate;
@@ -193,6 +193,8 @@
 
         // caso tenha o valor no localStorage 
         if (nightModeStorage) {
+          // $('#data_text').toggleClass('text-light');
+          $('#data_text').toggleClass('text-white-50');
           $('.navbar').toggleClass('bg-light navbar-light');
           $('.navbar').toggleClass('bg-dark navbar-dark');
           $('body').toggleClass('bg-dark text-white');
@@ -209,6 +211,7 @@
 
         $('#dark-mode').click(function(event) {
           event.preventDefault();
+          $('#data_text').toggleClass('text-light');
           $('.navbar').toggleClass('bg-light navbar-light');
           $('.navbar').toggleClass('bg-dark navbar-dark');
           $('body').toggleClass('bg-dark text-white');

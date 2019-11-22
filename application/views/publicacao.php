@@ -93,13 +93,13 @@
         </div>
     </section> -->
     
-    <section class="mt-5">
+    <section class="mt-5 pt-3">
 
-        <h1 class="text-center mt-5 mb-5"><?php echo $titulo; ?></h1>
-        <p class="text-center text-muted col-8 mx-auto"><?php echo $descricao ?></p>
+        <h1 id="p-titulo" class="text-center mt-5 mb-5"><?php echo $titulo; ?></h1>
+        <p id="p-desc" class="text-center text-muted col-8 mx-auto"><?php echo $descricao ?></p>
         
-        <div class="col-5 mt-5 mx-auto">
-          <p class="text-center text-muted col-8 mx-auto"><small>
+        <div class="col-5 mt-5 mx-auto text-muted">
+          <p id="p-data" class="text-center col-8 mx-auto"><small>
           <?php 
             $sampleDate = $data;
             $convertDate = date("d/m/Y", strtotime($sampleDate));                                  
@@ -164,6 +164,10 @@
 
         // caso tenha o valor no localStorage
         if (nightModeStorage) {
+          $('#p-data').toggleClass('text-white-50');
+          $('#p-desc').toggleClass('text-white-50');
+          $('#p-desc').toggleClass('text-muted');
+          $('#p-titulo').toggleClass('text-light');
           $('.navbar').toggleClass('bg-light navbar-light');
           $('.navbar').toggleClass('bg-dark navbar-dark');
           $('body').toggleClass('bg-dark text-white');
@@ -180,6 +184,10 @@
 
         $('#dark-mode').click(function(event) {
           event.preventDefault();
+          $('#p-data').toggleClass('text-white-50');
+          $('#p-titulo').toggleClass('text-light');
+          $('#p-desc').toggleClass('text-white-50');
+          $('#p-desc').toggleClass('text-muted');
           $('.navbar').toggleClass('bg-light navbar-light');
           $('.navbar').toggleClass('bg-dark navbar-dark');
           $('body').toggleClass('bg-dark text-white');

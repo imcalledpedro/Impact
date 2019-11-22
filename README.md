@@ -1,11 +1,16 @@
 # impact.github.io
 Projeto Impact - IFRN
 
+1.0.7
+
+- Correção de cor dos textos de publicação para melhor visibilidade
+
 1.0.6
 
 - Correção de bug ao salvar informações do usuário
 - As páginas de compra dos produtos agora são redirecionadas para uma nova guia
 - Novo rodapé com melhorias de facilidade de acesso
+- Remoção do formuláriod de contato
 
 1.0.5
 
