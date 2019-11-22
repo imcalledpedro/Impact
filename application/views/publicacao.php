@@ -96,10 +96,10 @@
     <section class="mt-5 pt-3">
 
         <h1 id="p-titulo" class="text-center mt-5 mb-5"><?php echo $titulo; ?></h1>
-        <p id="p-desc" class="text-center text-muted col-8 mx-auto"><?php echo $descricao ?></p>
+        <p class="text-center col-8 mx-auto"><?php echo $descricao ?></p>
         
-        <div class="col-5 mt-5 mx-auto text-muted">
-          <p id="p-data" class="text-center col-8 mx-auto"><small>
+        <div class="col-5 mt-5 mx-auto">
+          <p class="text-center text-muted col-8 mx-auto"><small>
           <?php 
             $sampleDate = $data;
             $convertDate = date("d/m/Y", strtotime($sampleDate));                                  
