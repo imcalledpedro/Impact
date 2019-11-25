@@ -93,6 +93,11 @@
                   <input name="anexo" value="<?php ?>" type="text" id="anexo" placeholder="Insira um link para anexar um arquivo, imagem, video, etc." class="form-control" rows="10"></input>
                 </div>
 
+                <div class="form-label-group mb-4">
+                    <label for="inputImagem">Link da imagem</label>
+                  <input name="link_imagem" value="<?php ?>" type="text" id="inputImagem" class="form-control"></input>
+                </div>
+
 
                 <button class="btn btn-lg btn-info btn-block text-uppercase" type="submit">Salvar</button>
 

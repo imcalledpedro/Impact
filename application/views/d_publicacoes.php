@@ -97,7 +97,7 @@
                         <th scope="col">Título</th>
                         <th scope="col">Descrição</th>
                         <th scope="col">Data</th>
-                        <th scope="col">Anexo</th>
+                        <!-- <th scope="col">Anexo</th> -->
                         <th scope="col" style="width: 10%">Ações</th>
                       </tr>
                     </thead>
@@ -110,7 +110,7 @@
                             <td><?= $publicacao->titulo; ?></td>
                             <td><?php echo character_limiter($publicacao->descricao, 20); ?></td>
                             <td><?php echo $publicacao->data_publicacao; ?></td>
-                            <td><a class="text-info" href="<?php echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td>
+                            <!-- <td><a class="text-info" href="<?php //echo $publicacao->anexo; ?>" target="_blank">Acessar</a></td> -->
                             <td>
                               <a class="text-info mx-1" href="<?php echo base_url() ?>dashboard/publicacoes/editar/?id=<?php echo $publicacao->id; ?>"><i class="fas fa-pen text-warning"></i></a>
 

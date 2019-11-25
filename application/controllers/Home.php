@@ -113,6 +113,7 @@ class Home extends CI_Controller {
 			'texto_completo' => $this->input->post("texto_completo"),
 			'data_publicacao' => $this->input->post("data_publicacao"),	
 			'anexo' => $this->input->post("anexo"),
+			'link_imagem' => $this->input->post('link_imagem'),
 		);
 		$this->load->model('Publicacoes_model');
 		$this->Publicacoes_model->cadastrarPublicacoes($dados);

@@ -1,5 +1,12 @@
 # Impact - Plataforma virtual de conscientização e reeducação sustantável
 
+> 1.0.8
+
+(Nov 24, 2019)
+
+- Correção de bug na página Adicionar Postagem
+- Implementação do rodapé modular "rodape.php"
+
 > 1.0.7
 
 (Nov 22, 2019)
