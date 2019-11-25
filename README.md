@@ -1,5 +1,11 @@
 # Impact - Plataforma virtual de conscientização e reeducação sustantável
 
+> 1.0.9
+
+(Nov 25, 2019)
+
+- Implementação do cabeçalho modular "navbar.php"
+
 > 1.0.8
 
 (Nov 24, 2019)
