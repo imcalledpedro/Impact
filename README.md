@@ -50,3 +50,22 @@
 - Correção nos tamanho do campo descrição nos produtos
 - Padronização dos botões no dashboard
 - Correção no tamanho da coluna ações nas tabelas do crud
+
+> 1.0.2
+
+(Nov 21, 2019)
+
+- Padronização dos botões da plataforma
+
+> 1.0.1
+
+(Nov 21, 2019)
+
+- Correção de bugs
+- Nova tela de "produto"
+
+> 1.0.0
+
+(Nov 20, 2019)
+
+- Versão de Lançamento
