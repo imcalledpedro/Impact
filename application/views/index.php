@@ -15,32 +15,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <style type="text/css">
-    	* {font-family: 'Lexend Deca', sans-serif}
-      html {scroll-behavior: smooth}
-      .bg-info{background-color: #5092c2 !important;}
-      .btn-info{background-color: #5092c2 !important;}
-      .border-info{border-color: #5092c2 !important;}
-      .text-info{color: #5092c2 !important;}
-      .floating {
-        position: fixed;
-        bottom: 25px;
-        right: 25px;
-        z-index: 1060;
-        border-radius:30px;
-      }
-      .floating2 {
-        position: fixed;
-        bottom: 70px;
-        right: 25px;
-        z-index: 1060;
-        border-radius:30px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>/assets/css/master.css">
 
     <title>Home | IMPACT</title>
   </head>
-  <body class=" mt-5 pt-1">
+  <body class=" mt-5 pt-1 bg-light">
 
     <!-- DarkMode Button -->
     <button id="dark-mode" class="btn btn-warning text-black-50 floating2"><i class="fas fa-adjust"></i></button>

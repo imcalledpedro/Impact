@@ -40,7 +40,7 @@
 
     <title>Produtos | IMPACT</title>
   </head>
-  <body class=" mt-5 pt-1">
+  <body class=" mt-5 pt-1 bg-light">
 
     <!-- DarkMode Button -->
     <button id="dark-mode" class="btn btn-warning text-black-50 floating2"><i class="fas fa-adjust"></i></button>

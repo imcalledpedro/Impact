@@ -1,0 +1,30 @@
+/*Fonte padrão da plataforma */
+* {font-family: 'Lexend Deca', sans-serif}
+
+/* Deslize suave da página */
+html {scroll-behavior: smooth}
+
+/* Cores personalizadas */
+.bg-primary { background-color:   #012034 !important}
+.btn-primary{background-color: #012034 !important;}
+.border-primary{border-color: #012034 !important;}
+.text-primary{color: #012034 !important;}
+
+.bg-info{background-color: #5092c2 !important;}
+.btn-info{background-color: #5092c2 !important;}
+.border-info{border-color: #5092c2 !important;}
+.text-info{color: #5092c2 !important;}
+.floating {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1060;
+  border-radius:30px;
+}
+.floating2 {
+  position: fixed;
+  bottom: 70px;
+  right: 25px;
+  z-index: 1060;
+  border-radius:30px;
+}

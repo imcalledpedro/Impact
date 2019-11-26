@@ -1,5 +1,12 @@
 # Impact - Plataforma virtual de conscientização e reeducação sustantável
 
+> 1.0.10
+
+(Nov 26, 2019)
+
+- Adição da folha de estilo modular "master.css"
+- Correção de cor de fundo das telas "index", "publicação", "produtos" e "produto"
+
 > 1.0.9
 
 (Nov 25, 2019)
