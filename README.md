@@ -1,5 +1,12 @@
 # Impact - Plataforma virtual de conscientização e reeducação sustantável
 
+> 1.0.11
+
+(Nov 27, 2019)
+
+- Correção de rotas da plataforma
+- Implementação de criptografia md5 no cadastro de usuários
+
 > 1.0.10
 
 (Nov 26, 2019)

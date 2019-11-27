@@ -46,7 +46,7 @@
     <button id="dark-mode" class="btn btn-warning text-black-50 floating2"><i class="fas fa-adjust"></i></button>
 
     <!-- Login button -->
-    <a title="Área do Administrador" href="login" class="btn btn-warning text-black-50 floating"><i class="fas fa-lock"></i></a>
+    <a title="Área do Administrador" href="<?php echo base_url(); ?>login" class="btn btn-warning text-black-50 floating"><i class="fas fa-lock"></i></a>
 
     <?php $this->load->view('navbar'); ?>
 

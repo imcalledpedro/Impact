@@ -15,7 +15,7 @@ class Usuario extends CI_Controller {
 		$this->load->model('Usuario_model');
 
 		$email = $this->input->post('email');
-		$password = $this->input->post('password');
+		$password = md5($this->input->post('password'));
 		$nome = $this->Usuario_model->puxarNomeDoCara($email);
 		$login = $this->Usuario_model->login($email,$password);
 
@@ -38,7 +38,7 @@ class Usuario extends CI_Controller {
 		$dados = array(
 			'name' => $this->input->post("name"),
 			'email' => $this->input->post("email"),
-			'password' => $this->input->post("password")	
+			'password' => md5($this->input->post("password"))	
 		);
 		$this->load->model('Usuario_model');
 		$this->Usuario_model->cadastrarUsuario($dados);
