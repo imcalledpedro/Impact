@@ -5,7 +5,7 @@
 (Nov 27, 2019)
 
 - Correção de rotas da plataforma
-- Implementação de criptografia md5 no cadastro de usuários
+~~- Implementação de criptografia md5 no cadastro de usuários~~
 
 > 1.0.10
 
